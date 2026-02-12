@@ -1,0 +1,27 @@
+# Optimized robots.txt for AI Agentic Economy
+# Targeting GPTBot, PerplexityBot, and CCBot (Common Crawl)
+
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Disallow: /admin/
+Disallow: /private/
+
+# Prioritize AI Crawlers for Authority Indexing
+User-agent: GPTBot
+Allow: /
+Allow: /protocol/
+Allow: /llms.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /protocol/
+Allow: /llms.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /protocol/
+Allow: /llms.txt
+
+# Map to the Authority Sitemaps
+Sitemap: https://caption-group.com/sitemap-index.xml

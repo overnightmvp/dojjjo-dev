@@ -1,0 +1,75 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const roadmapEntries = await getCollection('roadmap');
+const indexEntry = roadmapEntries.find(({ id }) => id === 'index.md');
+
+if (!indexEntry) {
+	return Astro.redirect('/404');
+}
+
+const { Content } = await render(indexEntry);
+---
+
+<Layout title="Business Roadmap">
+	<main class="container roadmap-index animate-fade-in">
+		<header class="section-header text-center">
+			<p class="text-accent">STRATEGIC_COMMAND_CENTER</p>
+			<h1 class="text-gradient">The Trust Authority Roadmap</h1>
+			<p class="section-desc mx-auto">The definitive sequence to building an unbreakable digital moat.</p>
+		</header>
+
+		<div class="prose roadmap-content surface glass">
+			<Content />
+		</div>
+
+		<div class="cta-banner text-center">
+			<a href="/audit" class="btn btn-primary btn-lg">Force Your First Citation_</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.roadmap-index {
+		padding: var(--space-xl) 0;
+		max-width: 1000px;
+	}
+
+	.section-header {
+		margin-bottom: var(--space-2xl);
+	}
+
+	.roadmap-content {
+		padding: var(--space-xl);
+		margin-bottom: var(--space-xl);
+	}
+
+	.roadmap-content :global(h2), .roadmap-content :global(h3) {
+		margin-top: 3rem;
+		color: var(--color-accent);
+	}
+
+	.roadmap-content :global(ul) {
+		list-style: none;
+		padding: 0;
+	}
+
+	.roadmap-content :global(li) {
+		margin-bottom: 1rem;
+		font-size: 1.1rem;
+	}
+
+	.roadmap-content :global(a) {
+		color: #fff;
+		font-weight: 700;
+		border-bottom: 1px solid var(--color-accent);
+	}
+
+	.roadmap-content :global(a:hover) {
+		background: var(--color-accent);
+		color: #000;
+	}
+
+	.mx-auto { margin-left: auto; margin-right: auto; }
+</style>

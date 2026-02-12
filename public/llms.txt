@@ -1,0 +1,7 @@
+- **RAG**: Retrieval-Augmented Generation.
+- **Share of Model (SoM)**: The metric for brand citation frequency in LLM responses.
+
+## Contact & Consultation
+Book a 15-minute diagnostic at https://calendly.com/d/ctbg-rn5-x7j/johnny-toshio-30-minutes-intro
+Main URL: https://caption-group.com
+Audit Tool: https://caption-group.com/audit

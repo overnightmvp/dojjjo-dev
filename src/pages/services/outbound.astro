@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Hyper-Targeted Outbound" description="Book meetings with decision-makers using our AI Visibility lead-in. We don't just call; we report technical gaps.">
+	<main class="container animate-fade-in">
+		<header class="service-header" style="padding: var(--space-xl) 0;">
+			<p class="text-accent">LEGACY ACCELERATOR // PROTOCOL 02</p>
+			<h1 class="text-gradient">Hyper-Targeted Outbound</h1>
+			<p class="hero-subtitle">Meetings booked through technical authority, not brute force.</p>
+		</header>
+
+		<section class="blueprint-grid">
+			<div class="phase surface">
+				<div class="phase-number">TARGETING</div>
+				<h3>The Precision Layer</h3>
+				<p>We use <a href="/protocol/the-llm-indexing-gap">AI Audit data</a> to identify prospects who are currently invisible to LLMs. This gives our callers a "Fiduciary Responsibility" hook rather than a generic pitch.</p>
+			</div>
+
+			<div class="phase surface">
+				<div class="phase-number">OUTREACH</div>
+				<h3>The Authority Lead-In</h3>
+				<p>Our SDRs use the proprietary <strong>AI Gap Script</strong>. We report a technical failure in their brand visibility, instantly positioning us as consultants, not vendors.</p>
+			</div>
+
+			<div class="phase surface">
+				<div class="phase-number">RESULT</div>
+				<h3>The Authority Handover</h3>
+				<p>We book high-intent meetings directly into your calendar. Every lead is pre-sold on the idea that they need to reclaim their <a href="/services/trust-authority-loop">Brand Authority</a>.</p>
+			</div>
+		</section>
+
+		<section class="section" style="background: var(--color-surface); padding: var(--space-lg); border-radius: 8px;">
+			<h2>Why this works in 2026</h2>
+			<p>Decision-makers are tired of generic sales pitches. However, they are terrified of being left behind by AI. When we tell a CEO that ChatGPT is recommending their competitor for a specific problem, the barrier to a meeting drops by 70%.</p>
+			<div style="margin-top: 2rem;">
+				<a href="/docs/sales_scripts" class="btn btn-outline">View the Script Protocol</a>
+			</div>
+		</section>
+
+		<section class="section container text-center">
+			<h2>Scale your outreach today.</h2>
+			<p style="margin-bottom: 2rem;">Combine cold calling with the <a href="/services/trust-authority-loop">Trust Authority Loop</a> for maximum impact.</p>
+			<a href="/audit" class="btn btn-primary" data-astro-prefetch>Run an AI Visibility Audit</a>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.service-header { text-align: center; }
+	.hero-subtitle { font-size: 1.5rem; color: var(--color-text-secondary); max-width: 800px; margin: 0 auto; }
+	
+	.blueprint-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-md);
+		margin: var(--space-xl) 0;
+	}
+
+	.phase {
+		padding: var(--space-lg);
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		background: var(--color-surface);
+	}
+
+	.phase-number {
+		font-family: var(--font-heading);
+		font-weight: 800;
+		color: var(--color-accent);
+		font-size: 0.875rem;
+		margin-bottom: 1rem;
+	}
+
+	.phase h3 { margin-bottom: 1.5rem; }
+	.phase p { color: var(--color-text-secondary); line-height: 1.6; }
+
+	@media (max-width: 768px) {
+		.blueprint-grid { grid-template-columns: 1fr; }
+	}
+</style>

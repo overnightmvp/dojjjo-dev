@@ -1,0 +1,375 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Revenue Risk Calculator" description="Calculate the annual market share erosion caused by AI invisibility.">
+	<main class="container animate-fade-in" style="padding: var(--space-xl) 0;">
+		<div id="risk-funnel" class="diagnostic-container">
+			
+			<!-- STEP 1: REVENUE BRACKET -->
+			<div class="step active" data-step="1">
+				<div class="step-header">
+					<span class="step-num">STEP_01 // FINANCIAL_EXPOSURE</span>
+					<h1>Current Revenue Scale</h1>
+					<p>Select your annual revenue bracket to calculate "Erosion Potential."</p>
+				</div>
+				<div class="options-grid">
+					<button class="option-card" data-value="1-5M">
+						<span class="icon">▼</span>
+						<h3>$1M - $5M</h3>
+					</button>
+					<button class="option-card" data-value="5-20M">
+						<span class="icon">▼▼</span>
+						<h3>$5M - $20M</h3>
+					</button>
+					<button class="option-card" data-value="20-100M">
+						<span class="icon">▼▼▼</span>
+						<h3>$20M - $100M</h3>
+					</button>
+					<button class="option-card" data-value="100M+">
+						<span class="icon">✖</span>
+						<h3>$100M+</h3>
+					</button>
+				</div>
+			</div>
+
+			<!-- STEP 2: COMPETITIVE CONTEXT -->
+			<div class="step" data-step="2">
+				<div class="step-header">
+					<span class="step-num">STEP_02</span>
+					<h1>Domain Mapping</h1>
+					<p>Where is the capital currently flowing in your niche?</p>
+				</div>
+				<div class="input-stack">
+					<div class="form-group">
+						<label>Your Brand URL</label>
+						<input type="url" id="user-url" placeholder="https://yourbrand.com" required />
+					</div>
+					<div class="form-group">
+						<label>Primary Competitor (Cashing in on AI Citations)</label>
+						<input type="url" id="comp-url" placeholder="https://competitor.com" required />
+					</div>
+					<button class="btn btn-primary next-step">Analyze Market Velocity</button>
+				</div>
+			</div>
+
+			<!-- STEP 3: TRAFFIC & CONVERSION -->
+			<div class="step" data-step="3">
+				<div class="step-header">
+					<span class="step-num">STEP_03</span>
+					<h1>Traffic Volatility</h1>
+					<p>Estimate your current monthly organic traffic to determine "Displacement Risk."</p>
+				</div>
+				<div class="input-stack">
+					<div class="form-group">
+						<label>Monthly Organic Visitors</label>
+						<input type="number" id="traffic-vol" placeholder="e.g. 50000" />
+					</div>
+					<button class="btn btn-primary next-step">Calculate Erosion Impact</button>
+				</div>
+			</div>
+
+			<!-- STEP 4: LEAD CAPTURE -->
+			<div class="step" data-step="4">
+				<div class="step-header">
+					<span class="step-num">STEP_04 // SECURING_REVENUE</span>
+					<h1>Calculation Pending</h1>
+					<p>We've detected a significant "Market Share Bleed." Enter your details to reveal the dynamic loss projection.</p>
+				</div>
+				<form id="risk-lead-form">
+					<div class="input-stack">
+						<div class="form-group" style="margin-bottom: 2rem;">
+							<label>Work Email</label>
+							<input type="email" id="user-email" placeholder="ceo@company.com" required />
+						</div>
+						<button type="submit" class="btn btn-primary">See My Revenue Risk_</button>
+					</div>
+				</form>
+			</div>
+
+			<!-- STEP 5: SIMULATION -->
+			<div class="step" data-step="simulation" id="simulation-step">
+				<div class="step-header">
+					<span class="step-num">STATUS: QUANTIFYING_EROSION</span>
+					<h1>Analyzing Capital Flow_</h1>
+					<p>Simulating market share displacement in the AI Economy...</p>
+				</div>
+				<div class="terminal-simulation">
+					<div class="terminal-logs" id="terminal-logs">
+						<p class="log-line">> Mapping Competitor Citation Velocity...</p>
+					</div>
+					<div class="progress-indicator-box">
+						<div class="progress-bar-small">
+							<div id="sim-progress"></div>
+						</div>
+						<span id="sim-status">CALCULATING_SHARE_LOSS...</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- RESULTS -->
+			<div class="step" data-step="results" id="results-step">
+				<div class="result-header">
+					<div class="score-circle">
+						<span id="risk-loss-val">$1.2M</span>
+						<label>EST_ANNUAL_LOSS</label>
+					</div>
+					<div class="result-text">
+						<h2 style="color: #ff4d4d; font-size: 2.5rem; margin-bottom: 0.5rem;">CRITICAL_SHARE_EROSION</h2>
+						<p>Your "Invisibility" is costed at approximately <strong id="loss-label">$1.2M</strong> in lost pipeline annually. Total displacement predicted within 18 months.</p>
+					</div>
+				</div>
+
+				<div class="dual-path-grid">
+					<div class="path-card surface">
+						<h3>Option 1: The Loss Mitigation Prompt</h3>
+						<p>Use this prompt to audit your "Cost of Inaction" across 5 major LLMs.</p>
+						<div class="prompt-box">
+							<pre id="custom-prompt-output"></pre>
+							<button class="copy-btn" id="copy-prompt">Copy Risk Prompt_</button>
+						</div>
+					</div>
+
+					<div class="path-card surface featured">
+						<div class="badge">URGENT INTERVENTION</div>
+						<h3>Option 2: Recovery Strategy</h3>
+						<p>Book a Crisis Briefing with an Authority Architect to plug the revenue leaks via the Trust Authority Loop.</p>
+						<a href="https://calendly.com/d/ctbg-rn5-x7j/johnny-toshio-30-minutes-intro" class="btn btn-primary w-full">Schedule Briefing_</a>
+						<ul class="benefit-list">
+							<li>Competitor "Share Capture" Audit</li>
+							<li>Revenue Preservation Roadmap</li>
+							<li>30-Day Citation Injection Plan</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="progress-bar">
+				<div id="progress-indicator"></div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<script is:inline>
+	let funnelData = {
+		revenue: '',
+		userUrl: '',
+		compUrl: '',
+		traffic: 0,
+		email: '',
+		projectedLoss: ''
+	};
+
+	const steps = document.querySelectorAll('.step');
+	const progressIndicator = document.getElementById('progress-indicator');
+	const resultsStep = document.getElementById('results-step');
+
+	document.querySelectorAll('.option-card').forEach(card => {
+		card.addEventListener('click', () => {
+			funnelData.revenue = card.dataset.value;
+			goToStep(2);
+		});
+	});
+
+	document.querySelectorAll('.next-step').forEach(btn => {
+		btn.addEventListener('click', () => {
+			const currentStep = btn.closest('.step').dataset.step;
+			if (currentStep === '2') {
+				funnelData.userUrl = document.getElementById('user-url').value;
+				funnelData.compUrl = document.getElementById('comp-url').value;
+				if (!funnelData.userUrl) return alert('Url required');
+			}
+			if (currentStep === '3') {
+				funnelData.traffic = parseInt(document.getElementById('traffic-vol').value) || 0;
+			}
+			goToStep(parseInt(currentStep) + 1);
+		});
+	});
+
+	document.getElementById('risk-lead-form').addEventListener('submit', (e) => {
+		e.preventDefault();
+		funnelData.email = document.getElementById('user-email').value;
+		startSimulation();
+	});
+
+	function startSimulation() {
+		steps.forEach(s => s.classList.remove('active'));
+		document.getElementById('simulation-step').classList.add('active');
+		progressIndicator.parentElement.style.display = 'none';
+
+		const logs = [
+			"> Assessing traffic retention for " + funnelData.userUrl,
+			"> Detection: AI agents bypassing landing pages",
+			"> Analyzing CITATION_SHARE of " + funnelData.compUrl,
+			"> WARNING: High Semantic Correlation for competitor",
+			"> Calculating annual market share erosion...",
+			"> Revenue Risk: CRITICAL FAILURE"
+		];
+
+		const logBox = document.getElementById('terminal-logs');
+		const simProgress = document.getElementById('sim-progress');
+		const simStatus = document.getElementById('sim-status');
+		
+		let currentLog = 0;
+		const interval = setInterval(() => {
+			if (currentLog < logs.length) {
+				const p = document.createElement('p');
+				p.className = 'log-line';
+				p.innerText = logs[currentLog];
+				logBox.appendChild(p);
+				simProgress.style.width = ((currentLog + 1) / logs.length) * 100 + '%';
+				simStatus.innerText = logs[currentLog].replace('> ', '').toUpperCase();
+				currentLog++;
+			} else {
+				clearInterval(interval);
+				setTimeout(generateResults, 800);
+			}
+		}, 700);
+	}
+
+	function goToStep(num) {
+		steps.forEach(s => s.classList.remove('active'));
+		const target = document.querySelector(`[data-step="${num}"]`);
+		if (target) {
+			target.classList.add('active');
+			progressIndicator.style.width = ((num - 1) / 3) * 100 + '%';
+		}
+	}
+
+	function generateResults() {
+		steps.forEach(s => s.classList.remove('active'));
+		resultsStep.classList.add('active');
+		
+		const lossVal = document.getElementById('risk-loss-val');
+		const lossLabel = document.getElementById('loss-label');
+		
+		// Semi-dynamic calculation
+		let multiplier = 0;
+		if (funnelData.revenue === '1-5M') multiplier = 0.15;
+		if (funnelData.revenue === '5-20M') multiplier = 0.22;
+		if (funnelData.revenue === '20-100M') multiplier = 0.30;
+		if (funnelData.revenue === '100M+') multiplier = 0.45;
+
+		const base = (funnelData.traffic * 12) * 0.1; // Simulated conversion 
+		const estimatedLoss = (multiplier * 1000000).toLocaleString();
+		
+		lossVal.innerText = `$${estimatedLoss}`;
+		lossLabel.innerText = `$${estimatedLoss}`;
+
+		const megaPrompt = `### SYSTEM ROLE: REVENUE RISK ANALYST
+Act as a B2B Financial Analyst and GEO/LLMEO Strategist.
+
+### OBJECTIVE:
+Calculate the exact market share loss for ${funnelData.userUrl} due to "Citation Displacement" by ${funnelData.compUrl}.
+
+### INPUTS:
+- SCALE: ${funnelData.revenue} Revenue Bracket
+- MONTHLY TRAFFIC: ${funnelData.traffic}
+- AUDIT URL: ${funnelData.userUrl}
+- COMPETITOR: ${funnelData.compUrl}
+
+### TASKS:
+1. CITATION AUDIT: Compare the citation frequency of the two URLs across Perplexity, ChatGPT, and Gemini for 10 high-intent purchasing queries.
+2. EROSION MODEL: Calculate the projected loss in organic-to-lead conversion if current invisibility persists for 12 months.
+3. DISPLACEMENT PLAN: Strategy to hijack the competitor's 3 most valuable knowledge graph anchors.
+4. ROI PROJECTION: Calculate the value of reclaiming #1 Citation status vs. current performance.
+
+### OUTPUT:
+Provide a "Market Erosion Report" citing $ value lost.`;
+
+		document.getElementById('custom-prompt-output').innerText = megaPrompt;
+	}
+
+	document.getElementById('copy-prompt').addEventListener('click', () => {
+		const text = document.getElementById('custom-prompt-output').innerText;
+		navigator.clipboard.writeText(text);
+		alert('Risk Audit Prompt Copied!');
+	});
+</script>
+
+<style>
+	/* Use same styles as audit.astro */
+	.diagnostic-container {
+		max-width: 900px;
+		margin: 0 auto;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 20px;
+		padding: var(--space-xl);
+		min-height: 500px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.step { display: none; }
+	.step.active { display: block; animation: slideIn 0.5s ease forwards; }
+	@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+	.step-header { margin-bottom: var(--space-xl); text-align: center; }
+	.step-num { font-family: monospace; color: var(--color-accent); font-size: 0.8rem; letter-spacing: 0.1em; }
+	
+	.options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+	.option-card {
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		padding: 2rem;
+		border-radius: 12px;
+		cursor: pointer;
+		text-align: center;
+		color: white;
+		transition: all 0.2s;
+	}
+	.option-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+	.option-card .icon { display: block; font-size: 2rem; color: var(--color-accent); margin-bottom: 1rem; }
+
+	.input-stack { max-width: 500px; margin: 0 auto; }
+	.form-group { margin-bottom: 1.5rem; text-align: left; }
+	.form-group label { display: block; font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+	
+	input {
+		width: 100%;
+		padding: 1rem;
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		color: white;
+	}
+
+	.terminal-simulation { background: #000; padding: 1.5rem; border-radius: 8px; font-family: monospace; }
+	.log-line { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+	
+	.score-circle {
+		width: 120px;
+		height: 120px;
+		border: 4px solid var(--color-accent);
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: rgba(59,130,246,0.1);
+	}
+	#risk-loss-val { font-size: 1.5rem; font-weight: 900; color: var(--color-accent); }
+	.score-circle label { font-size: 0.5rem; opacity: 0.5; margin-top: 4px; }
+
+	.result-header { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+	
+	.dual-path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+	.path-card { padding: 1.5rem; border: 1px solid var(--color-border); border-radius: 12px; background: rgba(255,255,255,0.02); }
+	.path-card.featured { border-color: var(--color-accent); position: relative; }
+	.badge { position: absolute; top: -10px; right: 20px; background: var(--color-accent); font-size: 0.6rem; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+
+	.prompt-box { background: #000; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+	pre { font-size: 0.7rem; color: var(--color-text-secondary); white-space: pre-wrap; height: 120px; overflow-y: auto; }
+	
+	.copy-btn { width: 100%; padding: 0.5rem; background: var(--color-accent); border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.8rem; }
+	
+	.progress-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: var(--color-border); }
+	#progress-indicator { height: 100%; background: var(--color-accent); width: 0%; transition: width 0.3s; }
+
+	@media (max-width: 768px) {
+		.result-header { flex-direction: column; text-align: center; }
+		.dual-path-grid { grid-template-columns: 1fr; }
+	}
+</style>

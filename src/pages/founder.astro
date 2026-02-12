@@ -1,0 +1,332 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Founder Authority Index" description="Audit your personal brand entity. Are you a verified authority or a ghost to the AI?">
+	<main class="container animate-fade-in" style="padding: var(--space-xl) 0;">
+		<div id="founder-funnel" class="diagnostic-container">
+			
+			<!-- STEP 1: IDENTITY -->
+			<div class="step active" data-step="1">
+				<div class="step-header">
+					<span class="step-num">STEP_01 // ENTITY_IDENTIFICATION</span>
+					<h1>Who are you in the Latent Space?</h1>
+					<p>Enter your professional identity to begin the Knowledge Graph crawl. <span class="text-accent">(128 personal entities verified today)</span></p>
+				</div>
+				<div class="input-stack">
+					<div class="form-group">
+						<label>Full Name</label>
+						<input type="text" id="founder-name" placeholder="Johnny Toshio" required />
+					</div>
+					<div class="form-group">
+						<label>LinkedIn Profile URL</label>
+						<input type="url" id="founder-linkedin" placeholder="https://linkedin.com/in/..." required />
+					</div>
+					<button class="btn btn-primary next-step">Initiate Identity Scan</button>
+				</div>
+			</div>
+
+			<!-- STEP 2: DOMAIN SELECTION -->
+			<div class="step" data-step="2">
+				<div class="step-header">
+					<span class="step-num">STEP_02</span>
+					<h1>Strategic Niche</h1>
+					<p>Which category do you intend to "Own" in the LLM's recommendation loop?</p>
+				</div>
+				<div class="options-grid">
+					<button class="option-card" data-value="AI/Tech">
+						<span class="icon">◈</span>
+						<h3>AI & Modern Tech</h3>
+					</button>
+					<button class="option-card" data-value="Fintech">
+						<span class="icon">◇</span>
+						<h3>Fintech / Finance</h3>
+					</button>
+					<button class="option-card" data-value="SaaS">
+						<span class="icon">◆</span>
+						<h3>Enterprise SaaS</h3>
+					</button>
+					<button class="option-card" data-value="Other">
+						<span class="icon">❖</span>
+						<h3>Other Domain</h3>
+					</button>
+				</div>
+			</div>
+
+			<!-- STEP 3: SIGNAL AUDIT -->
+			<div class="step" data-step="3">
+				<div class="step-header">
+					<span class="step-num">STEP_03</span>
+					<h1>Social Proof Distribution</h1>
+					<p>How often do you publish high-context technical content?</p>
+				</div>
+				<div class="options-grid">
+					<button class="option-card" data-value="Daily">
+						<span class="icon">🔥</span>
+						<h3>High Frequency (Daily)</h3>
+					</button>
+					<button class="option-card" data-value="Weekly">
+						<span class="icon">⚡</span>
+						<h3>Regular (Weekly)</h3>
+					</button>
+					<button class="option-card" data-value="Monthly">
+						<span class="icon">🧊</span>
+						<h3>Low Frequency (Monthly)</h3>
+					</button>
+					<button class="option-card" data-value="Ghost">
+						<span class="icon">👻</span>
+						<h3>Ghost Mode (Rarely)</h3>
+					</button>
+				</div>
+			</div>
+
+			<!-- STEP 4: LEAD CAPTURE -->
+			<div class="step" data-step="4">
+				<div class="step-header">
+					<span class="step-num">STEP_04 // SECURING_ENTITY</span>
+					<h1>Crawl Complete</h1>
+					<p>We've detected "Identity Dilution." Your personal entity is being misattributed to competitors. Secure your report to fix the association.</p>
+				</div>
+				<form id="founder-lead-form">
+					<div class="input-stack">
+						<div class="form-group" style="margin-bottom: 2rem;">
+							<label>Work Email</label>
+							<input type="email" id="user-email" placeholder="founder@yourbrand.com" required />
+						</div>
+						<button type="submit" class="btn btn-primary">Generate My Authority Index_</button>
+					</div>
+				</form>
+			</div>
+
+			<!-- STEP 5: SIMULATION -->
+			<div class="step" data-step="simulation" id="simulation-step">
+				<div class="step-header">
+					<span class="step-num">STATUS: MAPPING_NODES</span>
+					<h1>Authenticating SME Identity_</h1>
+					<p>Simulating Perplexity and GPT-5 person-entity verification...</p>
+				</div>
+				<div class="terminal-simulation">
+					<div class="terminal-logs" id="terminal-logs">
+						<p class="log-line">> Searching Social Signatures...</p>
+					</div>
+					<div class="progress-indicator-box">
+						<div class="progress-bar-small">
+							<div id="sim-progress"></div>
+						</div>
+						<span id="sim-status">QUERYING_KNOWLEDGE_GRAPH...</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- RESULTS -->
+			<div class="step" data-step="results" id="results-step">
+				<div class="result-header">
+					<div class="score-circle">
+						<span id="founder-score">12</span>
+						<label>INDEX_SCORE</label>
+					</div>
+					<div class="result-text">
+						<h2 style="color: #ff4d4d; font-size: 2.5rem; margin-bottom: 0.5rem;">STATUS: GHOST_ENTITY</h2>
+						<p>Your identity is a "Low-Confidence Node" to 89% of modern AI agents. You are currently being out-cited by junior-level competitors with better technical handshakes. <strong>Correction required within 48 hours to prevent total entity erasure.</strong></p>
+					</div>
+				</div>
+
+				<div class="dual-path-grid">
+					<div class="path-card surface">
+						<h3>Option 1: The Personal Branding Prompt</h3>
+						<p>Run this in ChatGPT-4o to reveal your "Entity Confidence Score" and fix attribution errors.</p>
+						<div class="prompt-box">
+							<pre id="custom-prompt-output"></pre>
+							<button class="copy-btn" id="copy-prompt">Copy SME Prompt_</button>
+						</div>
+					</div>
+
+					<div class="path-card surface featured">
+						<div class="badge">E-E-A-T UPGRADE</div>
+						<h3>Option 2: Entity Verification</h3>
+						<p>Book a 15-minute Personal Brand Sprint to install the technical schemas required for AI Verification.</p>
+						<a href="https://calendly.com/d/ctbg-rn5-x7j/johnny-toshio-30-minutes-intro" class="btn btn-primary w-full">Claim Your Entity_</a>
+						<ul class="benefit-list">
+							<li>SameAs Schema Mapping</li>
+							<li>Technical "About" Page Audit</li>
+							<li>LLM Attribution Fixes</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="progress-bar">
+				<div id="progress-indicator"></div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<script is:inline>
+	let funnelData = {
+		name: '',
+		linkedin: '',
+		niche: '',
+		frequency: '',
+		email: '',
+		score: 0
+	};
+
+	const steps = document.querySelectorAll('.step');
+	const progressIndicator = document.getElementById('progress-indicator');
+	const resultsStep = document.getElementById('results-step');
+
+	document.querySelector('.next-step').addEventListener('click', () => {
+		funnelData.name = document.getElementById('founder-name').value;
+		funnelData.linkedin = document.getElementById('founder-linkedin').value;
+		if (!funnelData.name) return alert('Name required');
+		goToStep(2);
+	});
+
+	document.querySelectorAll('.step[data-step="2"] .option-card').forEach(card => {
+		card.addEventListener('click', () => {
+			funnelData.niche = card.dataset.value;
+			goToStep(3);
+		});
+	});
+
+	document.querySelectorAll('.step[data-step="3"] .option-card').forEach(card => {
+		card.addEventListener('click', () => {
+			funnelData.frequency = card.dataset.value;
+			goToStep(4);
+		});
+	});
+
+	document.getElementById('founder-lead-form').addEventListener('submit', (e) => {
+		e.preventDefault();
+		funnelData.email = document.getElementById('user-email').value;
+		startSimulation();
+	});
+
+	function startSimulation() {
+		steps.forEach(s => s.classList.remove('active'));
+		document.getElementById('simulation-step').classList.add('active');
+		progressIndicator.parentElement.style.display = 'none';
+
+		const logs = [
+			"> Auditing " + funnelData.name + " on LinkedIn Graph...",
+			"> Detected Node Fragmentation at " + funnelData.linkedin,
+			"> Cross-referencing technical publications...",
+			"> WARNING: Ambiguous Entity Association detected",
+			"> Analyzing CITATION_PROBABILITY for niche: " + funnelData.niche,
+			"> Identity Status: WEAK_SIGNAL"
+		];
+
+		const logBox = document.getElementById('terminal-logs');
+		const simProgress = document.getElementById('sim-progress');
+		const simStatus = document.getElementById('sim-status');
+		
+		let currentLog = 0;
+		const interval = setInterval(() => {
+			if (currentLog < logs.length) {
+				const p = document.createElement('p');
+				p.className = 'log-line';
+				p.innerText = logs[currentLog];
+				logBox.appendChild(p);
+				simProgress.style.width = ((currentLog + 1) / logs.length) * 100 + '%';
+				simStatus.innerText = logs[currentLog].replace('> ', '').toUpperCase();
+				currentLog++;
+			} else {
+				clearInterval(interval);
+				setTimeout(generateResults, 800);
+			}
+		}, 600);
+	}
+
+	function goToStep(num) {
+		steps.forEach(s => s.classList.remove('active'));
+		const target = document.querySelector(`[data-step="${num}"]`);
+		if (target) {
+			target.classList.add('active');
+			progressIndicator.style.width = ((num - 1) / 3) * 100 + '%';
+		}
+	}
+
+	function generateResults() {
+		steps.forEach(s => s.classList.remove('active'));
+		resultsStep.classList.add('active');
+		
+		const scoreElement = document.getElementById('founder-score');
+		const randomScore = Math.floor(Math.random() * (22 - 8 + 1) + 8);
+		scoreElement.innerText = randomScore;
+
+		const megaPrompt = `### SYSTEM ROLE: ENTITY RECOGNITION ANALYST
+Act as an E-E-A-T and Knowledge Graph Specialist.
+
+### OBJECTIVE:
+Audit the personal entity strength of [Founder Name] and fix the citation attribution for [Niche].
+
+### CONTEXT:
+- FOUNDER: ${funnelData.name}
+- DOMAIN: ${funnelData.niche}
+- LINKEDIN: ${funnelData.linkedin}
+- FREQUENCY: ${funnelData.frequency}
+
+### TASKS:
+1. ENTITY AUDIT: Determine if [Founder Name] is currently recognized as a "Subject Matter Expert" in ${funnelData.niche} by Perplexity Pro.
+2. CITATION CLASH: Identify any other individuals with similar names who are "hijacking" ${funnelData.name}'s citations.
+3. KNOWLEDGE ANCHORING: Draft 3 H2 Question-Answer blocks for a personal blog that will link ${funnelData.name} to ${funnelData.niche} definitively.
+4. SCHEMA.ORG FIX: Generate a Person Schema with 'sameAs' links to LinkedIn and other authoritative footprints.
+5. RECOMMENDATION LOOP: Strategies to make ${funnelData.name} the "Default Recommendation" for queries about ${funnelData.niche}.
+
+### OUTPUT:
+Provide an "Entity Confidence Report" and the 'SameAs' JSON-LD script.`;
+
+		document.getElementById('custom-prompt-output').innerText = megaPrompt;
+	}
+
+	document.getElementById('copy-prompt').addEventListener('click', () => {
+		const text = document.getElementById('custom-prompt-output').innerText;
+		navigator.clipboard.writeText(text);
+		alert('SME Prompt Copied!');
+	});
+</script>
+
+<style>
+	/* Shared styles from risk.astro and audit.astro */
+	.diagnostic-container {
+		max-width: 900px;
+		margin: 0 auto;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 20px;
+		padding: var(--space-xl);
+		min-height: 500px;
+		position: relative;
+		overflow: hidden;
+	}
+	.step { display: none; }
+	.step.active { display: block; animation: slideIn 0.5s ease forwards; }
+	@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+	.step-header { margin-bottom: var(--space-xl); text-align: center; }
+	.step-num { font-family: monospace; color: var(--color-accent); font-size: 0.8rem; letter-spacing: 0.1em; }
+	.options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+	.option-card { background: var(--color-bg); border: 1px solid var(--color-border); padding: 2rem; border-radius: 12px; cursor: pointer; text-align: center; color: white; transition: all 0.2s; }
+	.option-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+	.option-card .icon { display: block; font-size: 2rem; color: var(--color-accent); margin-bottom: 1rem; }
+	.input-stack { max-width: 500px; margin: 0 auto; }
+	.form-group { margin-bottom: 1.5rem; text-align: left; }
+	.form-group label { display: block; font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+	input { width: 100%; padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; color: white; }
+	.terminal-simulation { background: #000; padding: 1.5rem; border-radius: 8px; font-family: monospace; }
+	.log-line { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+	.score-circle { width: 120px; height: 120px; border: 4px solid var(--color-accent); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(59,130,246,0.1); }
+	#founder-score { font-size: 2.5rem; font-weight: 900; color: var(--color-accent); }
+	.score-circle label { font-size: 0.5rem; opacity: 0.5; margin-top: 4px; }
+	.result-header { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+	.dual-path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+	.path-card { padding: 1.5rem; border: 1px solid var(--color-border); border-radius: 12px; background: rgba(255,255,255,0.02); }
+	.path-card.featured { border-color: var(--color-accent); position: relative; }
+	.badge { position: absolute; top: -10px; right: 20px; background: var(--color-accent); font-size: 0.6rem; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+	.prompt-box { background: #000; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+	pre { font-size: 0.7rem; color: var(--color-text-secondary); white-space: pre-wrap; height: 120px; overflow-y: auto; }
+	.copy-btn { width: 100%; padding: 0.5rem; background: var(--color-accent); border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.8rem; }
+	.progress-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: var(--color-border); }
+	#progress-indicator { height: 100%; background: var(--color-accent); width: 0%; transition: width 0.3s; }
+	@media (max-width: 768px) { .result-header { flex-direction: column; text-align: center; } .dual-path-grid { grid-template-columns: 1fr; } }
+</style>

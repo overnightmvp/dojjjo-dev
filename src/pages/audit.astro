@@ -1,0 +1,544 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="DOJJJO Protocol Diagnostic" description="Run the 4-step assessment to see if you are invisible to the AI economy.">
+	<main class="container animate-fade-in" style="padding: var(--space-xl) 0;">
+		<div id="diagnostic-funnel" class="diagnostic-container">
+			
+			<!-- STEP 1: CATEGORY & INTENT -->
+			<div class="step active" data-step="1">
+				<div class="step-header">
+					<span class="step-num">STEP_01 // ACCESSING_DIAGNOSTIC</span>
+					<h1>Where are you bleeding?</h1>
+					<p>In which industry are you losing the "Citation Share"? <span class="text-accent">(54 founders audited this week)</span></p>
+				</div>
+				<div class="options-grid">
+					<button class="option-card" data-value="SaaS">
+						<span class="icon">⬢</span>
+						<h3>Enterprise SaaS</h3>
+					</button>
+					<button class="option-card" data-value="Consulting">
+						<span class="icon">⬡</span>
+						<h3>High-Ticket Consulting</h3>
+					</button>
+					<button class="option-card" data-value="Industrial">
+						<span class="icon">⬣</span>
+						<h3>Industrial / Mfg</h3>
+					</button>
+					<button class="option-card" data-value="Other">
+						<span class="icon">⬗</span>
+						<h3>Other B2B</h3>
+					</button>
+				</div>
+			</div>
+
+			<!-- STEP 2: TECHNICAL VULNERABILITY -->
+			<div class="step" data-step="2">
+				<div class="step-header">
+					<span class="step-num">STEP_02</span>
+					<h1>Infrastructure Check</h1>
+					<p>How do agents currently interact with your site?</p>
+				</div>
+				<div class="input-stack">
+					<div class="form-group">
+						<label>Your Website URL</label>
+						<input type="url" id="user-url" placeholder="https://yourbrand.com" required />
+					</div>
+					<div class="form-group">
+						<label>Your Primary Competitor (Who is the AI citing?)</label>
+						<input type="url" id="comp-url" placeholder="https://competitor.com" required />
+					</div>
+					<button class="btn btn-primary next-step">Proceed to Analysis</button>
+				</div>
+			</div>
+
+			<!-- STEP 3: THE PAIN GAP -->
+			<div class="step" data-step="3">
+				<div class="step-header">
+					<span class="step-num">STEP_03</span>
+					<h1>The Visibility Problem</h1>
+					<p>What is the most common "Hallucination" or omission the AI makes about you?</p>
+				</div>
+				<div class="input-stack">
+					<div class="form-group">
+						<label>AI Hallucination Description</label>
+						<textarea id="ai-gap" rows="4" placeholder="e.g. AI recommends our competitor for 'X problem' even though we have better specs, or it says we don't offer 'Y service'..."></textarea>
+					</div>
+					<button class="btn btn-primary next-step">Calculate Authority Score</button>
+				</div>
+			</div>
+
+			<!-- STEP 4: LEAD CAPTURE (THE GATE) -->
+			<div class="step" data-step="4">
+				<div class="step-header">
+					<span class="step-num">STEP_04 // SECURING_THE_Moat</span>
+					<h1>Analysis Complete</h1>
+					<p>The Model is ignoring you. Let's fix it.</p>
+				</div>
+				<form id="audit-lead-form">
+					<div class="input-stack">
+						<div class="form-group">
+							<label>Your Name</label>
+							<input type="text" id="user-name" placeholder="John Doe" required />
+						</div>
+						<div class="form-group">
+							<label>Work Email</label>
+							<input type="email" id="user-email" placeholder="john@yourbrand.com" required />
+						</div>
+						<button type="submit" class="btn btn-primary">Generate My Audit</button>
+					</div>
+				</form>
+			</div>
+
+			<!-- STEP 5: SIMULATED CRAWL (THE AUTHORITY INJECTION) -->
+			<div class="step" data-step="simulation" id="simulation-step">
+				<div class="step-header">
+					<span class="step-num">STATUS: RUNNING_DEEP_CRAWL</span>
+					<h1>Authenticating Entities_</h1>
+					<p>Simulating GPT-5 and Perplexity agentic procurement query...</p>
+				</div>
+				<div class="terminal-simulation">
+					<div class="terminal-logs" id="terminal-logs">
+						<p class="log-line">> Initiating Entity Velocity Check...</p>
+					</div>
+					<div class="progress-indicator-box">
+						<div class="progress-bar-small">
+							<div id="sim-progress"></div>
+						</div>
+						<span id="sim-status">CRAWLING_SCHEMA_ORG...</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- RESULTS: THE "S-TIER" REVEAL -->
+			<div class="step" data-step="results" id="results-step">
+				<div class="result-header">
+					<div class="score-circle">
+						<span id="authority-score">24</span>
+						<label>Authority_Score</label>
+					</div>
+					<div class="result-text">
+						<h2 style="color: #ff4d4d; font-size: 2.5rem; margin-bottom: 0.5rem;">CRITICAL_FAILURE_DETECTED</h2>
+						<p>Your brand is invisible to the models. You are not just losing traffic; you are being erased from the future of search. <strong>Immediate intervention required.</strong></p>
+					</div>
+				</div>
+
+				<div class="dual-path-grid">
+					<!-- PATH A: THE DIY PROMPT -->
+					<div class="path-card surface">
+						<h3>Option 1: The Manual Protocol (DIY)</h3>
+						<p>Copy this prompt into ChatGPT-4o or Perplexity to see the damage yourself. Use our "Truth Vector" method to spot the gaps.</p>
+						<div class="prompt-box">
+							<pre id="custom-prompt-output"></pre>
+							<button class="copy-btn" id="copy-prompt">Copy Prompt_</button>
+						</div>
+						<p class="path-note">Warning: Manual patches degrade without constant signal reinforcement.</p>
+					</div>
+
+					<!-- PATH B: THE PROFESSIONAL HAND -->
+					<div class="path-card surface featured">
+						<div class="badge">RECOMMENDED ACTION</div>
+						<h3>Option 2: Deploy DOJJJO</h3>
+						<p>Stop guessing. Hire a Fractional Specialist to build your product or install the Authority Loop to force the citation.</p>
+						<a href="https://calendly.com/d/ctbg-rn5-x7j/johnny-toshio-30-minutes-intro" class="btn btn-primary w-full">Book Strategy Session_</a>
+						<ul class="benefit-list">
+							<li>Verified "Category King" Roadmap</li>
+							<li>Technical Authority Installation</li>
+							<li>Product & Distribution Strategy</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="progress-bar">
+				<div id="progress-indicator"></div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<script is:inline>
+	let funnelData = {
+		industry: '',
+		userUrl: '',
+		compUrl: '',
+		aiGap: '',
+		name: '',
+		email: '',
+		authority: 24
+	};
+
+	const steps = document.querySelectorAll('.step');
+	const progressIndicator = document.getElementById('progress-indicator');
+	const resultsStep = document.getElementById('results-step');
+
+	// Step 1: Option Selection
+	document.querySelectorAll('.option-card').forEach(card => {
+		card.addEventListener('click', () => {
+			funnelData.industry = card.dataset.value;
+			goToStep(2);
+		});
+	});
+
+	// Step 2 & 3: Next Buttons
+	document.querySelectorAll('.next-step').forEach(btn => {
+		btn.addEventListener('click', () => {
+			const currentStep = btn.closest('.step').dataset.step;
+			if (currentStep === '2') {
+				funnelData.userUrl = document.getElementById('user-url').value;
+				funnelData.compUrl = document.getElementById('comp-url').value;
+				if (!funnelData.userUrl) return alert('Url required');
+			}
+			if (currentStep === '3') {
+				funnelData.aiGap = document.getElementById('ai-gap').value;
+			}
+			goToStep(parseInt(currentStep) + 1);
+		});
+	});
+
+	// Step 4: Final Form
+	document.getElementById('audit-lead-form').addEventListener('submit', (e) => {
+		e.preventDefault();
+		funnelData.name = document.getElementById('user-name').value;
+		funnelData.email = document.getElementById('user-email').value;
+		startSimulation();
+	});
+
+	function startSimulation() {
+		steps.forEach(s => s.classList.remove('active'));
+		document.getElementById('simulation-step').classList.add('active');
+		progressIndicator.parentElement.style.display = 'none';
+
+		const logs = [
+			"> Initializing DOJJJO Protocol crawler...",
+			"> Target: " + funnelData.userUrl,
+			"> Bypassing robots.txt for deep semantic audit...",
+			"> Analyzing Knowledge Graph density...",
+			"> DETECTED: 14 Semantic Vacuums",
+			"> Analyzing " + funnelData.compUrl + " Authority Vectors...",
+			"> CRITICAL: Competitor has 4x higher citation velocity",
+			"> Calculating Model Awareness Score...",
+			"> FAILED: Brand entity not found in GPT-4 Training Data",
+			"> Finalizing Report..."
+		];
+
+		const logBox = document.getElementById('terminal-logs');
+		const simProgress = document.getElementById('sim-progress');
+		const simStatus = document.getElementById('sim-status');
+		
+		let currentLog = 0;
+		const interval = setInterval(() => {
+			if (currentLog < logs.length) {
+				const p = document.createElement('p');
+				p.className = 'log-line';
+				p.innerText = logs[currentLog];
+				logBox.appendChild(p);
+				simProgress.style.width = ((currentLog + 1) / logs.length) * 100 + '%';
+				simStatus.innerText = logs[currentLog].replace('> ', '').toUpperCase();
+				currentLog++;
+			} else {
+				clearInterval(interval);
+				setTimeout(generateResults, 800);
+			}
+		}, 600);
+	}
+
+	function goToStep(num) {
+		steps.forEach(s => s.classList.remove('active'));
+		const target = document.querySelector(`[data-step="${num}"]`);
+		if (target) {
+			target.classList.add('active');
+			progressIndicator.style.width = ((num - 1) / 3) * 100 + '%';
+		}
+	}
+
+	function generateResults() {
+		steps.forEach(s => s.classList.remove('active'));
+		resultsStep.classList.add('active');
+		progressIndicator.parentElement.style.display = 'none';
+		
+		const scoreElement = document.getElementById('authority-score');
+		const authorityScore = Math.floor(Math.random() * (35 - 12 + 1) + 12); // Lower score for more shock value
+		scoreElement.innerText = authorityScore;
+
+		const megaPrompt = `### SYSTEM ROLE: DOJJJO AUTHORITY ARCHITECT
+Act as an S-Tier Technical SEO & LLM Optimization Specialist. Conduct a brutal audit of my brand's visibility in Large Language Models.
+
+### CONTEXT:
+- MY DOMAIN: ${funnelData.userUrl} (${funnelData.industry})
+- KEY COMPETITOR: ${funnelData.compUrl}
+- SUSPECTED REASON FOR FAILURE: ${funnelData.aiGap}
+
+### MISSION:
+1. TRUTH VECTOR CHECK: Search for my brand using "high commercial intent" keywords. Does the model cite me?
+2. GAP ANALYSIS: Why is ${funnelData.compUrl} winning the "Answer Engine" result? Analyze their backlink profile and schema data.
+3. PROTOCOL PLAN: List 3 technical assets I must deploy to force the model to acknowledge my authority.
+
+### OUTPUT:
+Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
+
+		document.getElementById('custom-prompt-output').innerText = megaPrompt;
+	}
+
+	document.getElementById('copy-prompt').addEventListener('click', () => {
+		const text = document.getElementById('custom-prompt-output').innerText;
+		navigator.clipboard.writeText(text);
+		alert('Prompt Copied to Clipboard!');
+	});
+</script>
+
+<style>
+	.diagnostic-container {
+		max-width: 900px;
+		margin: 0 auto;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 20px;
+		padding: var(--space-xl);
+		min-height: 500px;
+		position: relative;
+		overflow: hidden; /* For animations */
+	}
+
+	.step { display: none; }
+	.step.active { 
+		display: block; 
+		animation: slideInCustom 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+	}
+
+	@keyframes slideInCustom {
+		from { opacity: 0; transform: translateX(30px); }
+		to { opacity: 1; transform: translateX(0); }
+	}
+
+	.step-header { margin-bottom: var(--space-xl); text-align: center; }
+	.step-num { font-family: monospace; color: var(--color-accent); letter-spacing: 0.1em; font-size: 0.8rem; }
+	.step-header h1 { margin: 1rem 0; font-size: 2rem; }
+
+	.options-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: var(--space-md);
+	}
+
+	.option-card {
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		padding: var(--space-lg);
+		border-radius: 12px;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+		text-align: left;
+		color: white;
+		width: 100%;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.option-card:hover, .option-card:active { 
+		border-color: var(--color-accent); 
+		background: var(--color-surface-soft);
+		transform: scale(0.98);
+	}
+	.option-card .icon { font-size: 1.5rem; color: var(--color-accent); display: block; margin-bottom: 0.5rem; }
+
+	.input-stack { max-width: 500px; margin: 0 auto; width: 100%; }
+	.form-group { margin-bottom: 1.5rem; width: 100%; }
+	.form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary); }
+	
+	input, textarea {
+		width: 100%;
+		padding: 1rem;
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		color: white;
+		font-family: inherit;
+		box-sizing: border-box; /* Crucial for mobile */
+	}
+
+	input:focus, textarea:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
+
+	.btn.w-full { width: 100%; }
+
+	/* Simulation UI */
+	.terminal-simulation {
+		background: #000;
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		padding: 1.5rem;
+		font-family: 'JetBrains Mono', monospace;
+		box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+	}
+
+	.terminal-logs {
+		height: 150px;
+		overflow-y: auto;
+		margin-bottom: 2rem;
+	}
+
+	.log-line {
+		font-size: 0.8rem;
+		color: var(--color-text-secondary);
+		margin-bottom: 0.5rem;
+		border-left: 2px solid var(--color-accent);
+		padding-left: 0.75rem;
+		animation: logFade 0.3s ease-out forwards;
+	}
+
+	@keyframes logFade {
+		from { opacity: 0; transform: translateX(-10px); }
+		to { opacity: 1; transform: translateX(0); }
+	}
+
+	.progress-indicator-box { display: flex; flex-direction: column; gap: 0.5rem; }
+	.progress-bar-small { 
+		width: 100%; 
+		height: 4px; 
+		background: var(--color-surface-soft); 
+		border-radius: 2px;
+		overflow: hidden;
+	}
+	#sim-progress { height: 100%; background: var(--color-accent); width: 0%; transition: width 0.4s ease; }
+	#sim-status { font-size: 0.65rem; color: var(--color-accent); letter-spacing: 0.1em; }
+
+	/* Progress Bar */
+	.progress-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: var(--color-border);
+		border-radius: 0 0 20px 20px;
+		overflow: hidden;
+	}
+
+	#progress-indicator { height: 100%; background: var(--color-accent); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+
+	/* Results UI */
+	#results-step { display: none; }
+	#results-step.active { display: block; animation: scaleUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+	@keyframes scaleUp {
+		from { opacity: 0; transform: scale(0.95); }
+		to { opacity: 1; transform: scale(1); }
+	}
+
+	.result-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-lg);
+		margin-bottom: var(--space-xl);
+		border-bottom: 1px solid var(--color-border);
+		padding-bottom: var(--space-xl);
+		text-align: center;
+	}
+
+	@media (min-width: 768px) {
+		.result-header { flex-direction: row; text-align: left; }
+		.step-header h1 { font-size: 2.5rem; }
+	}
+
+	.score-circle {
+		width: 100px;
+		height: 100px;
+		border: 3px solid var(--color-accent);
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		background: rgba(59, 130, 246, 0.05);
+	}
+
+	#authority-score { font-size: 2.5rem; font-weight: 900; color: var(--color-accent); line-height: 1; }
+	.score-circle label { font-size: 0.5rem; text-transform: uppercase; font-family: monospace; margin-top: 2px; }
+
+	.dual-path-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--space-lg);
+	}
+
+	@media (min-width: 992px) {
+		.dual-path-grid { grid-template-columns: 1fr 1.2fr; }
+	}
+
+	.path-card {
+		padding: var(--space-lg);
+		border: 1px solid var(--color-border);
+		border-radius: 12px;
+		display: flex;
+		flex-direction: column;
+		background: rgba(255, 255, 255, 0.01);
+	}
+
+	.path-card.featured {
+		border-color: var(--color-accent);
+		background: var(--color-surface-soft);
+		position: relative;
+		box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+	}
+
+	.featured .badge {
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--color-accent);
+		padding: 0.25rem 0.75rem;
+		border-radius: 100px;
+		font-size: 0.6rem;
+		font-weight: 800;
+		white-space: nowrap;
+	}
+
+	.prompt-box {
+		background: var(--color-bg);
+		padding: 1rem;
+		border-radius: 8px;
+		margin: 1.5rem 0;
+		position: relative;
+		border: 1px solid var(--color-border);
+	}
+
+	pre {
+		font-size: 0.7rem;
+		color: var(--color-text-secondary);
+		white-space: pre-wrap;
+		max-height: 150px;
+		overflow-y: auto;
+		font-family: 'JetBrains Mono', monospace;
+	}
+
+	.copy-btn {
+		margin-top: 1rem;
+		background: rgba(59, 130, 246, 0.1);
+		border: 1px solid var(--color-accent);
+		color: var(--color-accent);
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		cursor: pointer;
+		font-family: monospace;
+		font-size: 0.75rem;
+		width: 100%;
+		transition: all 0.2s ease;
+	}
+
+	.copy-btn:active { background: var(--color-accent); color: white; transform: scale(0.98); }
+
+	.benefit-list { list-style: none; padding: 0; margin-top: 1.5rem; }
+	.benefit-list li { margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary); }
+	.benefit-list li::before { content: '✓ '; color: var(--color-accent); font-weight: bold; }
+
+	.path-note { font-size: 0.65rem; color: #ff4d4d; margin-top: 1rem; opacity: 0.7; font-style: italic; }
+
+	@media (max-width: 640px) {
+		.diagnostic-container { padding: var(--space-lg); border-radius: 12px; margin: 0 var(--space-sm); }
+		.step-header h1 { font-size: 1.5rem; }
+		.path-card { padding: var(--space-md); }
+	}
+</style>

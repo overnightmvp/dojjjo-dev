@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Customer Journey Map | Caption">
+    <main class="container cjm-container animate-fade-in">
+        <header class="section-header text-center">
+            <p class="text-accent">INTERNAL_TOOL // V1.0</p>
+            <h1 class="text-gradient">Customer Journey Architecture</h1>
+            <p class="section-desc mx-auto">Visualizing the flow from "Invisible" to "Authority".</p>
+        </header>
+
+        <div class="cjm-viz surface glass">
+            <div class="mermaid">
+                graph TD
+                    %% NODES - STAGES
+                    A[Start: Unaware] -->|Search/Social| B(Awareness: Landing)
+                    B -->|Click CTA| C&#123;Selection: Tier?&#125;
+                    
+                    %% AWARENESS LAYER
+                    subgraph AWARENESS [Phase 1: Awareness]
+                        B -->|/index| HOME[/Home: The AI Gap/]
+                        HOME -->|Nav| PROTOCOL[/Protocol Index/]
+                    end
+
+                    %% EDUCATION LAYER
+                    subgraph EDUCATION [Phase 2: Education]
+                        C -->|Option A| BASE[/Services: Trust Authority Loop/]
+                        C -->|Option B| SPEED[/Services: Hyper-Outbound/]
+                        PROTOCOL -->|Deep Dive| P_DETAIL[Protocol Assets 01-06]
+                        HOME -->|Read Strategy| ROADMAP[Roadmap: The Blueprint]
+                    end
+
+                    %% DECISION LAYER
+                    subgraph DECISION [Phase 3: Decision]
+                        BASE -->|Verify| LLMS[llms.txt Agent File]
+                        SPEED -->|Verify| CASE[Case Studies / Metrics]
+                        P_DETAIL -->|Trust Signal| PR[External PR Anchors]
+                    end
+
+                    %% CONVERSION LAYER
+                    subgraph ACTION [Phase 4: Conversion]
+                        HOME -->|Top CTA| AUDIT
+                        BASE -->|Buy Now| AUDIT
+                        SPEED -->|Book Call| AUDIT
+                        ROADMAP -->|Start| AUDIT
+                        AUDIT[<a href='/audit' style='color:#fff'>/AUDIT PAGE</a>] -->|Submit Form| CALENDLY[Calendly Booking]
+                        CALENDLY -->|Close| DEAL[$$$ Contract]
+                    end
+
+                    %% STYLES
+                    classDef default fill:#0a0a0a,stroke:#333,color:#fff;
+                    classDef accent fill:#FF3333,stroke:#FF3333,color:#fff,stroke-width:2px;
+                    classDef goal fill:#00cc66,stroke:#00cc66,color:#000;
+                    
+                    class AUDIT accent;
+                    class DEAL goal;
+            </div>
+            
+            <!-- CONTROLS -->
+            <div class="viz-controls">
+                <button class="ctrl-btn" id="zoom-in" title="Zoom In">+</button>
+                <button class="ctrl-btn" id="zoom-out" title="Zoom Out">-</button>
+                <button class="ctrl-btn reset" id="zoom-reset" title="Reset View">RST</button>
+            </div>
+        </div>
+
+        <div class="legend surface mt-8">
+            <h3>Legend</h3>
+            <ul class="legend-list">
+                <li><span class="dot accent"></span><strong>Red Node:</strong> Primary Conversion Point (/audit)</li>
+                <li><span class="dot goal"></span><strong>Green Node:</strong> Revenue Event</li>
+                <li><span class="dot border"></span><strong>Standard Node:</strong> informational Page</li>
+            </ul>
+        </div>
+    </main>
+</Layout>
+
+
+
+<style>
+    .cjm-container {
+        padding: var(--space-xl) 0;
+        position: relative;
+    }
+
+    .cjm-viz {
+        padding: 0;
+        overflow: hidden;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: grab;
+        border: 1px solid var(--color-border);
+        background: radial-gradient(circle at center, #111 0%, #000 100%);
+    }
+
+    .cjm-viz:active {
+        cursor: grabbing;
+    }
+
+    .mermaid {
+        transform-origin: center center;
+        transition: transform 0.1s ease-out;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Controls */
+    .viz-controls {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        z-index: 10;
+        background: var(--color-surface);
+        padding: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-md);
+    }
+
+    .ctrl-btn {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--color-border);
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .ctrl-btn:hover {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+    }
+
+    .ctrl-btn.reset {
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+
+    .legend-list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .legend-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-text-secondary);
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .dot.accent { background: var(--color-accent); }
+    .dot.goal { background: var(--color-success); }
+    .dot.border { border: 1px solid var(--color-text-secondary); }
+
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .mt-8 { margin-top: 2rem; }
+</style>
+
+<script type="module" is:inline>
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    
+    // Initialize Mermaid
+    mermaid.initialize({ 
+        startOnLoad: true,
+        theme: 'dark',
+        themeVariables: {
+            primaryColor: '#0a0a0a',
+            primaryTextColor: '#fff',
+            primaryBorderColor: '#333',
+            lineColor: '#FF3333',
+            secondaryColor: '#111',
+            tertiaryColor: '#000'
+        }
+    });
+
+    // Simple Pan/Zoom Logic for Mermaid
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.cjm-viz');
+        const target = document.querySelector('.mermaid');
+        const btnIn = document.getElementById('zoom-in');
+        const btnOut = document.getElementById('zoom-out');
+        const btnReset = document.getElementById('zoom-reset');
+
+        if (!container || !target) return;
+
+        let scale = 1;
+        let pX = 0;
+        let pY = 0;
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+
+        const updateTransform = () => {
+            target.style.transform = `translate(${pX}px, ${pY}px) scale(${scale})`;
+        };
+
+        // ZOOM CONTROLS
+        const zoom = (delta) => {
+            scale += delta;
+            scale = Math.min(Math.max(0.5, scale), 4); // Limit zoom 0.5x to 4x
+            updateTransform();
+        };
+
+        btnIn?.addEventListener('click', () => zoom(0.2));
+        btnOut?.addEventListener('click', () => zoom(-0.2));
+        btnReset?.addEventListener('click', () => {
+            scale = 1;
+            pX = 0;
+            pY = 0;
+            updateTransform();
+        });
+
+        // WHEEL ZOOM
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.1 : 0.1;
+            zoom(delta);
+        });
+
+        // DRAG PANNING
+        container.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX - pX;
+            startY = e.clientY - pY;
+            container.style.cursor = 'grabbing';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            pX = e.clientX - startX;
+            pY = e.clientY - startY;
+            updateTransform();
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+            container.style.cursor = 'grab';
+        });
+    });
+</script>

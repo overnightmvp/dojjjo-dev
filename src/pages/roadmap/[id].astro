@@ -1,0 +1,90 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const entries = await getCollection('roadmap', ({ id }) => id !== 'index.md');
+	return entries.map((entry) => ({
+		params: { id: entry.id.replace(/\.md$/, '') },
+		props: { entry },
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const title = entry.data.title || "Business Roadmap";
+---
+
+<Layout title={title}>
+	<main class="container roadmap-page animate-fade-in">
+		<header class="roadmap-header tech-line">
+			<p class="text-accent">S-TIER_ROADMAP // {entry.id.toUpperCase()}</p>
+			<h1 class="text-gradient">{title}</h1>
+		</header>
+
+		<div class="prose roadmap-content surface glass">
+			<Content />
+		</div>
+
+		<div class="roadmap-nav h-stack justify-between">
+			<a href="/roadmap" class="btn btn-outline">&larr; Back to Index</a>
+			<a href="/audit" class="btn btn-primary">Lock in Execution_</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.roadmap-page {
+		padding: var(--space-xl) 0;
+		max-width: 900px;
+	}
+
+	.roadmap-header {
+		margin-bottom: var(--space-xl);
+	}
+
+	.roadmap-content {
+		padding: var(--space-xl);
+		line-height: 1.8;
+		font-size: 1.1rem;
+		margin-bottom: var(--space-lg);
+	}
+
+	.roadmap-content :global(h2) {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		color: var(--color-accent);
+		border-bottom: 1px solid var(--color-border);
+		padding-bottom: 0.5rem;
+	}
+
+	.roadmap-content :global(ul) {
+		margin-bottom: 2rem;
+		list-style: none;
+		padding: 0;
+	}
+
+	.roadmap-content :global(li) {
+		margin-bottom: 0.75rem;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.roadmap-content :global(li::before) {
+		content: '▨';
+		position: absolute;
+		left: 0;
+		color: var(--color-accent);
+	}
+
+	.roadmap-content :global(a) {
+		color: var(--color-accent);
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+
+	.roadmap-nav {
+		margin-top: var(--space-lg);
+	}
+</style>

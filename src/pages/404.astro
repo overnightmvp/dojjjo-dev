@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404: Entity Not Found" description="The requested entity does not exist in our current authority index.">
+	<main class="container void-container">
+		<div class="terminal-void surface animate-fade-in">
+			<div class="void-header">
+				<span class="status-code">404</span>
+				<span class="status-text">ERROR: ENTITY_O MISSION</span>
+			</div>
+			
+			<div class="void-body">
+				<p class="log-line">> Requesting path: <span id="requested-path">UNKNOWN</span></p>
+				<p class="log-line">> Scanning Knowledge Graph...</p>
+				<p class="log-line ERROR">> ERROR: RESOURCE_NOT_FOUND_IN_TOPIC_CLUSTER</p>
+				<p class="log-line">> Suggestion: Your brand intent is misaligned.</p>
+			</div>
+
+			<div class="void-actions">
+				<a href="/audit" class="btn btn-primary">Re-Index My Strategy</a>
+				<a href="/" class="btn btn-outline">Return to Command Center</a>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<script is:inline>
+	document.getElementById('requested-path').innerText = window.location.pathname;
+</script>
+
+<style>
+	.void-container {
+		height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.terminal-void {
+		max-width: 600px;
+		width: 100%;
+		padding: var(--space-xl);
+		background: #000;
+		border: 1px solid var(--color-border);
+		box-shadow: 0 0 50px rgba(255, 77, 77, 0.1);
+	}
+
+	.void-header {
+		margin-bottom: var(--space-lg);
+		border-bottom: 1px solid var(--color-border);
+		padding-bottom: var(--space-md);
+	}
+
+	.status-code {
+		display: block;
+		font-size: 5rem;
+		font-weight: 900;
+		color: #ff4d4d;
+		line-height: 1;
+	}
+
+	.status-text {
+		font-family: monospace;
+		font-size: 0.8rem;
+		letter-spacing: 0.2em;
+		color: var(--color-text-secondary);
+	}
+
+	.void-body {
+		text-align: left;
+		margin-bottom: var(--space-lg);
+		font-family: 'JetBrains Mono', monospace;
+	}
+
+	.log-line {
+		margin-bottom: 0.5rem;
+		font-size: 0.9rem;
+		color: var(--color-text-secondary);
+	}
+
+	.log-line.ERROR {
+		color: #ff4d4d;
+		font-weight: 700;
+	}
+
+	.void-actions {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	@media (max-width: 640px) {
+		.void-actions { flex-direction: column; }
+		.terminal-void { padding: var(--space-lg); }
+	}
+</style>

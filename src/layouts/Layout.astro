@@ -1,0 +1,236 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import "../styles/global.css";
+
+interface Props {
+        title: string;
+        description?: string;
+        image?: string;
+}
+
+const {
+	title,
+	description = "DOJJJO: Decrease the time between idea and execution. The Fractional Product Studio for Builders.",
+	image = "/og-image.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://dojjjo.com");
+
+const ldJson = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DOJJJO",
+  "url": "https://dojjjo.com",
+  "logo": "https://dojjjo.com/logo.png",
+  "description": description,
+  "sameAs": [
+    "https://www.linkedin.com/company/dojjjo",
+    "https://twitter.com/johnnytoshio"
+  ],
+  "knowsAbout": ["Fractional Product Ownership", "Generative Engine Optimization", "Authority Building", "MVP Development"]
+};
+
+const expertSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Johnny Toshio",
+  "jobTitle": "Fractional Product Specialist & Authority Architect",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "DOJJJO"
+  },
+  "description": "Founder of DOJJJO. Decreasing the time between idea and execution for multi-hyphenate builders.",
+  "url": "https://dojjjo.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/johnnytoshio"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8" />
+                <meta name="description" content={description} />
+                <meta name="viewport" content="width=device-width" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                <meta name="generator" content={Astro.generator} />
+                <title>{title} | DOJJJO</title>
+
+                <!-- SEO Primitives -->
+                <link rel="canonical" href={canonicalURL} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:url" content={canonicalURL} />
+                <meta property="og:image" content={new URL(image, canonicalURL)} />
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={new URL(image, canonicalURL)} />
+
+                <script type="application/ld+json" set:html={JSON.stringify(ldJson)} />
+                <script type="application/ld+json" set:html={JSON.stringify(expertSchema)} />
+		<slot name="head" />
+		<ClientRouter />
+        </head>
+	        <body class="bg-deep text-white selection:bg-accent/30 selection:text-white">
+                <!-- S-TIER GLOBAL NAVIGATION -->
+                <header class="global-header" id="global-header">
+                        <nav class="nav-container">
+                                <a href="/" class="nav-logo" data-astro-prefetch>
+                                        DOJJJO<span class="text-accent">_</span>
+                                </a>
+                                
+                                <div class="nav-links desktop-only">
+                                        <a href="/work" data-astro-prefetch>Work</a>
+                                        <a href="/protocol" data-astro-prefetch>Protocol</a>
+                                        <a href="/services" data-astro-prefetch>Services</a>
+                                        <a href="/roadmap" data-astro-prefetch>Roadmap</a>
+                                        <a href="/audit" class="btn btn-primary btn-sm" data-astro-prefetch>Run Audit_</a>
+                                </div>
+
+                                <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                                        <div class="hamburger"></div>
+                                </button>
+                        </nav>
+                </header>
+
+                <!-- MOBILE OVERLAY MENU -->
+                <div class="mobile-overlay" id="mobile-overlay">
+                        <div class="overlay-content">
+                                <div class="overlay-header">
+                                        <span class="nav-logo">DOJJJO<span class="text-accent">_</span></span>
+                                        <button class="close-overlay" id="close-overlay">&times;</button>
+                                </div>
+                                <nav class="mobile-nav-list v-stack">
+                                        <a href="/" class="mobile-nav-link">Home</a>
+                                        <a href="/work" class="mobile-nav-link">Case Studies</a>
+                                        <a href="/protocol" class="mobile-nav-link">The Protocol</a>
+                                        <a href="/services" class="mobile-nav-link">Services</a>
+                                        <a href="/roadmap" class="mobile-nav-link">Roadmap</a>
+                                        <hr class="nav-divider" />
+                                        <a href="/audit" class="btn btn-primary btn-lg w-full">Run Product Audit_</a>
+                                </nav>
+                        </div>
+                </div>
+
+                <!-- STICKY MOBILE CTA -->
+                <div class="sticky-audit-cta md-hidden">
+                        <a href="/audit" class="btn btn-primary w-full shadow-premium">Run Audit_</a>
+                </div>
+
+                <main class="pt-20">
+                        <slot />
+                </main>
+
+                <footer>
+                        <div class="container footer-grid line-h">
+                                <div class="footer-brand">
+                                        <span class="logo">DOJJJO<span class="text-accent">_</span></span>
+                                        <p>Decrease the time between idea and execution.</p>
+                                </div>
+                                <div class="footer-nav">
+                                        <h4>AUTHORITY_PROTOCOL</h4>
+                                        <a href="/protocol" data-astro-prefetch>Technical Protocol Index</a>
+                                        <a href="/roadmap" data-astro-prefetch>Strategic Roadmap</a>
+                                        <a href="/protocol/the-llm-indexing-gap" data-astro-prefetch>01 // Indexing Gaps</a>
+                                        <a href="/protocol/entity-velocity" data-astro-prefetch>02 // Entity Velocity</a>
+                                        <a href="/protocol/pr-as-a-trust-signal" data-astro-prefetch>03 // Signal Injection</a>
+                                </div>
+                                <div class="footer-nav">
+                                        <h4>DIAGNOSTIC_TOOLS</h4>
+                                        <a href="/audit" data-astro-prefetch>Product Readiness Audit</a>
+                                        <a href="/risk" data-astro-prefetch>Revenue Risk Calculator</a>
+                                        <a href="/llms.txt" data-astro-prefetch>llms.txt (Agent Native)</a>
+                                </div>
+                                <div class="footer-nav">
+                                        <h4>SERVICES</h4>
+                                        <a href="/services" data-astro-prefetch>Services Index</a>
+                                        <a href="/services/fractional-product-specialist" data-astro-prefetch>Fractional Product Specialist</a>
+                                        <a href="/services/trust-authority-loop" data-astro-prefetch>The Authority Loop</a>
+                                        <a href="/services/outbound" data-astro-prefetch>Caption Outbound</a>
+                                </div>
+                                <div class="footer-nav">
+                                        <h4>ROADMAP</h4>
+                                        <a href="/roadmap/01-core-transformation" data-astro-prefetch>01 // Core Identity</a>
+                                        <a href="/roadmap/04-service-blueprint" data-astro-prefetch>04 // Service Blueprint</a>
+                                        <a href="/roadmap/05-llm-strategy" data-astro-prefetch>05 // LLM Strategy</a>
+                                        <a href="/roadmap/09-profit-roadmap" data-astro-prefetch>09 // Profit Model</a>
+                                </div>
+                        </div>
+                        <div class="container footer-bottom">
+                                <p>&copy; 2026 DOJJJO. SYSTEMATIC EXECUTION FOR BUILDERS.</p>
+                        </div>
+                </footer>
+
+                <script is:inline>
+                        const header = document.getElementById('global-header');
+                        const mobileToggle = document.getElementById('mobile-menu-toggle');
+                        const mobileOverlay = document.getElementById('mobile-overlay');
+                        const closeOverlay = document.getElementById('close-overlay');
+                        
+                        // Scroll Effect
+                        window.addEventListener('scroll', () => {
+                                if (window.scrollY > 50) {
+                                        header.classList.add('header-scrolled');
+                                } else {
+                                        header.classList.remove('header-scrolled');
+                                }
+                        });
+
+                        // Mobile Menu Toggle
+                        mobileToggle.addEventListener('click', () => {
+                                mobileOverlay.classList.add('active');
+                                document.body.style.overflow = 'hidden';
+                        });
+
+                        closeOverlay.addEventListener('click', () => {
+                                mobileOverlay.classList.remove('active');
+                                document.body.style.overflow = '';
+                        });
+
+                        // Close on link click
+                        mobileOverlay.querySelectorAll('a').forEach(link => {
+                                link.addEventListener('click', () => {
+                                        mobileOverlay.classList.remove('active');
+                                        document.body.style.overflow = '';
+                                });
+                        });
+                </script>
+
+                <style is:global>
+                        .header-scrolled {
+                                background: rgba(10, 10, 11, 0.4);
+                                backdrop-filter: blur(20px);
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                                padding: 0.5rem 0;
+                        }
+                        .container {
+                                max-width: 1200px;
+                                margin: 0 auto;
+                                padding: 0 1.5rem;
+                        }
+                        .btn-sm { font-size: 0.75rem; padding: 0.5rem 1rem; }
+
+                        /* Global Footer Styles */
+                        footer { padding: var(--space-xl) 0 var(--space-md); border-top: 1px solid var(--color-border); margin-top: var(--space-xl); background: var(--color-bg); }
+                        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: var(--space-xl); padding-bottom: var(--space-lg); }
+                        .footer-brand .logo { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.05em; margin-bottom: 1rem; display: block; color: #fff; }
+                        .footer-brand p { color: var(--color-text-secondary); font-size: 0.85rem; }
+                        .footer-nav h4 { font-size: 0.75rem; color: #fff; margin-bottom: 1.5rem; opacity: 0.5; font-family: monospace; letter-spacing: 0.1em; }
+                        .footer-nav a { display: block; color: var(--color-text-secondary); margin-bottom: 0.75rem; font-size: 0.85rem; transition: var(--transition-fast); }
+                        .footer-nav a:hover { color: var(--color-accent); transform: translateX(4px); }
+                        .footer-bottom { border-top: 1px solid var(--color-border); padding-top: 2rem; text-align: center; color: var(--color-text-secondary); font-size: 0.65rem; letter-spacing: 0.1em; }
+
+                        @media (max-width: 992px) {
+                                .footer-grid { grid-template-columns: 1fr 1fr; }
+                        }
+                        @media (max-width: 640px) {
+                                .footer-grid { grid-template-columns: 1fr; text-align: center; }
+                                .footer-nav a:hover { transform: none; }
+                        }
+                </style>
+        </body>
+</html>

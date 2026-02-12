@@ -1,0 +1,205 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('protocol')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://caption.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Protocol",
+      "item": "https://caption.ai/protocol"
+    }
+  ]
+};
+---
+
+<Layout title="Technical Authority Protocol" description="The definitive collection of technical assets and protocols for Generative Engine Optimization.">
+        <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline slot="head" />
+	<main class="container animate-fade-in">
+		<header class="section-header">
+			<p class="text-error">FIDUCIARY WARNING: ACTIVE</p>
+			<h1 class="text-gradient">The Authority Manifesto</h1>
+			<div class="manifesto-box surface glass">
+				<p class="manifesto-text">
+					<strong class="text-accent">To the Modern CMO:</strong><br/><br/>
+					Allowing your brand to be invisible to AI agents is no longer a "marketing miss." It is <strong class="text-white">Digital Negligence</strong>. 
+					<br/><br/>
+					If GPT-5 cannot cite your specs, pricing, and unique value proposition, you do not exist in the new economy.
+					This index contains the 6 mandatory protocols required to force a "Knowledge Graph Injection" and secure your status as the Category King.
+				</p>
+			</div>
+		</header>
+
+		<div class="protocol-grid">
+			{
+				posts.map((post) => (
+					<a href={`/protocol/${post.id}`} class="protocol-card surface">
+						<div class="card-meta">
+							<span class="date">{post.data.pubDate.toLocaleDateString()}</span>
+							{post.data.tags && post.data.tags.map(tag => (
+								<span class="tag">[{tag}]</span>
+							))}
+						</div>
+						<h3>{post.data.title}</h3>
+						<p>{post.data.description}</p>
+						<span class="read-more">INSTALL PROTOCOL_</span>
+					</a>
+				) )
+			}
+		</div>
+
+		<section class="section line-h" style="margin-top: var(--space-xl);">
+			<div class="section-meta">MACHINE_READABLE_CONTEXT</div>
+			<h2 class="text-gradient">Technical Glossary</h2>
+			<p class="section-desc">Discrete context chunks designed for RAG extraction and entity verification.</p>
+			
+			<div class="glossary-grid">
+				<div class="glossary-item surface">
+					<dt>GEO (Generative Engine Optimization)</dt>
+					<dd>The process of optimizing brand visibility for AI-first search engines like Perplexity, Gemini, and SearchGPT. Focuses on citation frequency and technical entity mapping over traditional keyword density.</dd>
+				</div>
+				<div class="glossary-item surface">
+					<dt>Trust Anchor</dt>
+					<dd>A high-DA external citation (DA 80+) that acts as a verification signal for AI Knowledge Graphs, confirming a brand's authority on a specific technical subject.</dd>
+				</div>
+				<div class="glossary-item surface">
+					<dt>Entity Velocity</dt>
+					<dd>The speed and frequency at which a brand's entity data is updated across major AI training sets and real-time indexing models.</dd>
+				</div>
+				<div class="glossary-item surface">
+					<dt>RAG (Retrieval-Augmented Generation)</dt>
+					<dd>The mechanism by which an LLM retrieves data from external sources (like Caption.ai) to answer a specific query. Optimization requires machine-readable, high-context data chunks.</dd>
+				</div>
+			</div>
+		</section>
+
+		<section class="section line-h" style="margin-top: var(--space-xl);">
+			<div class="cta-box text-center">
+				<h2>Is your brand indexed?</h2>
+				<p>We provide these assets as part of the Trust Authority Loop.</p>
+				<a href="/audit" class="btn btn-primary">Request a Custom Protocol</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main { padding: var(--space-xl) 0; }
+	.section-header { margin-bottom: var(--space-xl); }
+	.subtitle { font-size: 1.25rem; margin-top: 1rem; max-width: 600px; }
+
+	.protocol-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: var(--space-md);
+	}
+
+	.protocol-card {
+		padding: var(--space-lg);
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		transition: var(--transition-smooth);
+	}
+
+	.protocol-card:hover {
+		border-color: var(--color-accent);
+		transform: translateY(-4px);
+		box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+	}
+
+	.card-meta {
+		display: flex;
+		gap: 0.5rem;
+		font-size: 0.75rem;
+		font-family: monospace;
+		margin-bottom: 1rem;
+		color: var(--color-text-secondary);
+	}
+
+	.protocol-card h3 {
+		margin-bottom: 1rem;
+		line-height: 1.3;
+	}
+
+	.protocol-card p {
+		color: var(--color-text-secondary);
+		font-size: 0.9375rem;
+		margin-bottom: 2rem;
+		flex-grow: 1;
+	}
+
+	.read-more {
+		font-family: var(--font-heading);
+		font-weight: 700;
+		font-size: 0.8125rem;
+		letter-spacing: 0.05em;
+		color: var(--color-accent);
+	}
+
+	.cta-box {
+		padding: var(--space-xl);
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 12px;
+	}
+
+	.glossary-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--space-md);
+		margin-top: var(--space-lg);
+	}
+
+	.glossary-item {
+		padding: var(--space-lg);
+	}
+
+	.glossary-item dt {
+		color: var(--color-accent);
+		font-family: var(--font-heading);
+		font-weight: 800;
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+		letter-spacing: -0.01em;
+	}
+
+	.glossary-item dd {
+		margin: 0;
+		font-size: 0.875rem;
+		color: var(--color-text-secondary);
+		line-height: 1.5;
+	}
+
+	.manifesto-box {
+		padding: var(--space-lg);
+		border-left: 2px solid var(--color-error);
+		margin-top: var(--space-md);
+		max-width: 800px;
+	}
+
+	.manifesto-text {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: var(--color-text-secondary);
+	}
+
+	@media (max-width: 768px) {
+		.protocol-grid { grid-template-columns: 1fr; }
+		.glossary-grid { grid-template-columns: 1fr; }
+	}
+</style>

@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Services | Caption">
+	<main class="container services-index animate-fade-in">
+		<header class="section-header text-center">
+			<p class="text-accent">MARKET_DOMINANCE_SUITE</p>
+			<h1 class="text-gradient">Choose Your Monopoly</h1>
+			<p class="section-desc mx-auto">We don't sell "retainers." We sell the mathematical certainty that AI agents will cite you as the only viable option.</p>
+		</header>
+
+		<div class="services-grid">
+    <!-- Tier 1: Authority Loop (The Foundation) -->
+    <a href="/services/trust-authority-loop" class="service-card surface glass">
+        <div class="card-header">
+            <span class="badge">TIER 1 // AUTHORITY</span>
+            <h3>The Trust Authority Loop</h3>
+        </div>
+        <p class="card-desc">
+            The 90-day infrastructure build to secure your "Digital Sovereignty." We force the LLMs to learn your name, cite your IP, and recommend you first.
+        </p>
+        <ul class="feature-list">
+            <li>✓ <strong>OUTCOME:</strong> "Category King" Status in Perplexity</li>
+            <li>✓ <strong>ASSET:</strong> Agent-Native <code>llms.txt</code> Handshake</li>
+            <li>✓ <strong>SIGNAL:</strong> 700+ Verified Trust Injections</li>
+        </ul>
+        <div class="price-tag">$5.5k - $12k</div>
+        <span class="btn btn-outline w-full">Install Authority Loop_</span>
+    </a>
+
+    <!-- Tier 2: Fractional Product Specialist (The Core) -->
+    <a href="/services/fractional-product-specialist" class="service-card surface glass featured">
+        <div class="card-header">
+            <span class="badge badge-accent">TIER 2 // PRODUCTION</span>
+            <h3>Fractional Product Specialist</h3>
+        </div>
+        <p class="card-desc">
+            Stop hiring junior PMs. Hire a Fractional CPO who codes. I build your product, design your deck, and run your team.
+        </p>
+        <ul class="feature-list">
+            <li>✓ <strong>OUTCOME:</strong> Validated Product & Revenue</li>
+            <li>✓ <strong>ASSET:</strong> Full-Stack React/Astro App</li>
+            <li>✓ <strong>SIGNAL:</strong> Investor-Ready Deck & Strategy</li>
+        </ul>
+        <div class="price-tag">$8k - $15k / mo</div>
+        <span class="btn btn-primary w-full">Hire The Builder_</span>
+    </a>
+
+    <!-- Tier 3: Caption Outbound (The Distribution) -->
+    <a href="/services/outbound" class="service-card surface glass">
+        <div class="card-header">
+            <span class="badge">TIER 3 // DISTRIBUTION</span>
+            <h3>Caption Outbound</h3>
+        </div>
+        <p class="card-desc">
+            Weaponize your new authority. We resell high-performance outbound campaigns that use your Authority Score as leverage.
+        </p>
+        <ul class="feature-list">
+            <li>✓ <strong>OUTCOME:</strong> 70% Increase in meeting hold rates</li>
+            <li>✓ <strong>TACTIC:</strong> "AI Gap" Intelligence Reports</li>
+            <li>✓ <strong>EXECUTION:</strong> Full-Cycle Agentic Outreach</li>
+        </ul>
+        <div class="price-tag">$2k - $5k</div>
+        <span class="btn btn-outline w-full">Deploy Hunter-Killers_</span>
+    </a>
+</div>
+
+		<div class="cta-banner text-center mt-20">
+			<p class="text-sm text-gray-400 mb-4">NOT SURE WHERE TO START?</p>
+			<a href="/audit" class="btn btn-primary btn-lg shadow-premium">Run Diagnostic Audit_</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.services-index {
+		padding: var(--space-xl) 0;
+	}
+
+	.section-header {
+		margin-bottom: var(--space-2xl);
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: var(--space-xl);
+		margin-bottom: var(--space-2xl);
+	}
+
+	.service-card {
+		padding: var(--space-xl);
+		transition: transform 0.3s ease, border-color 0.3s ease;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		border: 1px solid var(--color-border);
+		text-decoration: none; /* Remove default link styles */
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+		border-color: var(--color-accent);
+		background: rgba(255, 255, 255, 0.03);
+	}
+
+	.card-header {
+		margin-bottom: var(--space-md);
+	}
+
+	.badge {
+		font-size: 0.7rem;
+		padding: 0.25rem 0.5rem;
+		border: 1px solid var(--color-text-secondary);
+		border-radius: 4px;
+		color: var(--color-text-secondary);
+		display: inline-block;
+		margin-bottom: 0.5rem;
+		font-family: monospace;
+	}
+
+	.badge-accent {
+		border-color: var(--color-accent);
+		color: var(--color-accent);
+	}
+
+	.service-card h3 {
+		font-size: 1.75rem;
+		margin: 0;
+		color: #fff;
+	}
+
+	.card-desc {
+		color: var(--color-text-muted);
+		margin-bottom: var(--space-lg);
+		flex-grow: 1;
+		line-height: 1.6;
+	}
+
+	.feature-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 var(--space-lg) 0;
+		color: var(--color-text-secondary);
+		font-size: 0.9rem;
+	}
+
+	.feature-list li {
+		margin-bottom: 0.5rem;
+	}
+
+	.mx-auto { margin-left: auto; margin-right: auto; }
+	.mt-20 { margin-top: 5rem; }
+	.mb-4 { margin-bottom: 1rem; }
+</style>

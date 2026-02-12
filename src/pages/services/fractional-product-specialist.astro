@@ -1,0 +1,188 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Fractional Product Specialist" description="Stop hiring junior PMs. Hire a Fractional CPO who codes. The bridge between vision and execution.">
+	<main class="container animate-fade-in">
+		<header class="service-header">
+			<p class="text-accent">CORE OFFER // PRODUCTION</p>
+			<h1 class="text-gradient">Fractional Product Specialist</h1>
+			<p class="hero-subtitle">I build your product, design your deck, and run your team.</p>
+		</header>
+
+		<section class="blueprint-grid">
+			<div class="phase surface">
+				<div class="phase-number">PHASE 01</div>
+				<h3>Strategy & Design</h3>
+				<ul>
+					<li>Product Roadmap & Vision</li>
+					<li>User Journey Mapping</li>
+					<li>High-Fidelity UI/UX (Figma)</li>
+					<li>Investor Deck Design</li>
+				</ul>
+			</div>
+
+			<div class="phase surface">
+				<div class="phase-number">PHASE 02</div>
+				<h3>Full-Stack Execution</h3>
+				<ul>
+					<li>Rapid Prototyping</li>
+					<li>Production-Grade Development</li>
+					<li>Next.js / Astro / Tailwind</li>
+					<li>AI Integration & Automation</li>
+				</ul>
+			</div>
+
+			<div class="phase surface">
+				<div class="phase-number">PHASE 03</div>
+				<h3>Growth & Scale</h3>
+				<ul>
+					<li>Analytics & feedback Loops</li>
+					<li>Conversion Rate Optimization</li>
+					<li>Technical Team Leadership</li>
+					<li>Go-To-Market Strategy Support</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="pricing section">
+			<h2 class="text-center">Retainer Models</h2>
+			<div class="pricing-grid">
+				<div class="price-card">
+					<h4>The Builder</h4>
+					<div class="price">$8,000<span>/mo</span></div>
+					<ul>
+						<li>Design + Development</li>
+						<li>Single Feature Focus</li>
+						<li>Weekly Sprints</li>
+						<li>Async Communication</li>
+					</ul>
+					<a href="/audit" class="btn btn-outline" data-astro-prefetch>Start Building</a>
+				</div>
+
+				<div class="price-card featured">
+                    <div class="badge">MOST POPULAR</div>
+					<h4>The Fractional CPO</h4>
+					<div class="price">$15,000<span>/mo</span></div>
+					<ul>
+						<li>Full Product Leadership</li>
+						<li>Strategy + Design + Dev</li>
+						<li>Team Management</li>
+						<li>Priority Support</li>
+					</ul>
+					<a href="/audit" class="btn btn-primary" data-astro-prefetch>Hire The CPO</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main { padding: var(--space-xl) 0; }
+	.service-header { margin-bottom: var(--space-xl); text-align: center; }
+	.hero-subtitle { font-size: 1.5rem; color: var(--color-text-secondary); }
+
+	.blueprint-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-md);
+		margin-bottom: var(--space-xl);
+	}
+
+	.phase {
+		padding: var(--space-lg);
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		background: var(--color-surface);
+	}
+
+	.phase-number {
+		font-family: var(--font-heading);
+		font-weight: 800;
+		color: var(--color-accent);
+		font-size: 0.875rem;
+		margin-bottom: 1rem;
+	}
+
+	.phase h3 { margin-bottom: 1.5rem; }
+
+	.phase ul {
+		list-style: none;
+		padding: 0;
+		color: var(--color-text-secondary);
+	}
+
+	.phase li {
+		margin-bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.phase li::before {
+		content: '->';
+		margin-right: 0.5rem;
+		color: var(--color-accent);
+		font-size: 0.75rem;
+	}
+
+	.pricing-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-lg);
+		max-width: 900px;
+		margin: var(--space-lg) auto;
+	}
+
+	.price-card {
+		padding: var(--space-lg);
+		border: 1px solid var(--color-border);
+		border-radius: 12px;
+		background: var(--color-surface);
+		display: flex;
+		flex-direction: column;
+	}
+    
+    .price-card.featured {
+		border-color: var(--color-accent);
+		transform: scale(1.05);
+		position: relative;
+	}
+
+    	.badge {
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--color-accent);
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 100px;
+		font-size: 0.75rem;
+		font-weight: 800;
+	}
+
+	.price {
+		font-size: 3rem;
+		font-weight: 900;
+		margin: 1rem 0;
+	}
+
+	.price span { font-size: 1rem; color: var(--color-text-secondary); }
+
+	.price-card ul {
+		margin: var(--space-md) 0;
+		padding: 0;
+		list-style: none;
+		flex-grow: 1;
+	}
+
+	.price-card li {
+		margin-bottom: 1rem;
+		color: var(--color-text-secondary);
+	}
+
+	@media (max-width: 768px) {
+		.blueprint-grid { grid-template-columns: 1fr; }
+		.pricing-grid { grid-template-columns: 1fr; }
+	}
+</style>
