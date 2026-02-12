@@ -17,7 +17,7 @@ The AI doesn't read paragraphs. It reads "Vectors" (mathematical relationships b
 *   **The File:** `llms.txt`. This is a summary file for robots that lives on your site. If you don't have one, you are effectively invisible to the 2026 web.
 
 #### 2. The Citation Moat (PR-to-Entity)
-AI models value "Consensus." If 10 high-authority sites say "Caption is the leader in Layouts," the AI accepts it as a fact.
+AI models value "Consensus." If 10 high-authority sites say "DOJJJO is the leader in Layouts," the AI accepts it as a fact.
 *   **The Tactic:** We don't do PR for "brand awareness." We do PR to create **Truth Anchors** for the Knowledge Graph.
 
 #### 3. N-Gram Alignment

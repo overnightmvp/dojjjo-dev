@@ -2,79 +2,83 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="DOJJJO Protocol Diagnostic" description="Run the 4-step assessment to see if you are invisible to the AI economy.">
+<Layout title="Product & Authority Diagnostic" description="Run the DOJJJO protocol diagnostic to evaluate your brand's AI visibility and product execution readiness.">
 	<main class="container animate-fade-in" style="padding: var(--space-xl) 0;">
 		<div id="diagnostic-funnel" class="diagnostic-container">
 			
 			<!-- STEP 1: CATEGORY & INTENT -->
 			<div class="step active" data-step="1">
 				<div class="step-header">
-					<span class="step-num">STEP_01 // ACCESSING_DIAGNOSTIC</span>
-					<h1>Where are you bleeding?</h1>
-					<p>In which industry are you losing the "Citation Share"? <span class="text-accent">(54 founders audited this week)</span></p>
+					<span class="step-num">STEP_01 // INITIALIZING_DIAGNOSTIC</span>
+					<h1>Where is the bottleneck?</h1>
+					<p>In which area is your execution failing? <span class="text-accent">(42 founders audited this month)</span></p>
 				</div>
 				<div class="options-grid">
-					<button class="option-card" data-value="SaaS">
+					<button class="option-card" data-value="Production">
 						<span class="icon">⬢</span>
-						<h3>Enterprise SaaS</h3>
+						<h3>Product Production</h3>
+						<p style="font-size: 0.75rem; opacity: 0.7;">We can't ship fast enough.</p>
 					</button>
-					<button class="option-card" data-value="Consulting">
+					<button class="option-card" data-value="Authority">
 						<span class="icon">⬡</span>
-						<h3>High-Ticket Consulting</h3>
+						<h3>Market Authority</h3>
+						<p style="font-size: 0.75rem; opacity: 0.7;">AI agents don't cite us.</p>
 					</button>
-					<button class="option-card" data-value="Industrial">
+					<button class="option-card" data-value="Distribution">
 						<span class="icon">⬣</span>
-						<h3>Industrial / Mfg</h3>
+						<h3>Sales Distribution</h3>
+						<p style="font-size: 0.75rem; opacity: 0.7;">Leads are cold and generic.</p>
 					</button>
-					<button class="option-card" data-value="Other">
+					<button class="option-card" data-value="FullStudio">
 						<span class="icon">⬗</span>
-						<h3>Other B2B</h3>
+						<h3>Full Studio Build</h3>
+						<p style="font-size: 0.75rem; opacity: 0.7;">We need an end-to-end OS.</p>
 					</button>
 				</div>
 			</div>
 
-			<!-- STEP 2: TECHNICAL VULNERABILITY -->
+			<!-- STEP 2: INFRASTRUCTURE -->
 			<div class="step" data-step="2">
 				<div class="step-header">
-					<span class="step-num">STEP_02</span>
-					<h1>Infrastructure Check</h1>
-					<p>How do agents currently interact with your site?</p>
+					<span class="step-num">STEP_02 // INFRASTRUCTURE_CHECK</span>
+					<h1>Entity Verification</h1>
+					<p>How does the machine currently see your brand?</p>
 				</div>
 				<div class="input-stack">
 					<div class="form-group">
-						<label>Your Website URL</label>
+						<label>Your Brand/Product URL</label>
 						<input type="url" id="user-url" placeholder="https://yourbrand.com" required />
 					</div>
 					<div class="form-group">
-						<label>Your Primary Competitor (Who is the AI citing?)</label>
+						<label>Primary Authority Competitor</label>
 						<input type="url" id="comp-url" placeholder="https://competitor.com" required />
 					</div>
 					<button class="btn btn-primary next-step">Proceed to Analysis</button>
 				</div>
 			</div>
 
-			<!-- STEP 3: THE PAIN GAP -->
+			<!-- STEP 3: THE GAP -->
 			<div class="step" data-step="3">
 				<div class="step-header">
-					<span class="step-num">STEP_03</span>
-					<h1>The Visibility Problem</h1>
-					<p>What is the most common "Hallucination" or omission the AI makes about you?</p>
+					<span class="step-num">STEP_03 // GAP_ANALYSIS</span>
+					<h1>The Execution Gap</h1>
+					<p>What is the primary "hallucination" or technical friction you're facing?</p>
 				</div>
 				<div class="input-stack">
 					<div class="form-group">
-						<label>AI Hallucination Description</label>
-						<textarea id="ai-gap" rows="4" placeholder="e.g. AI recommends our competitor for 'X problem' even though we have better specs, or it says we don't offer 'Y service'..."></textarea>
+						<label>Describe the friction</label>
+						<textarea id="ai-gap" rows="4" placeholder="e.g. AI recommends our competitor, our MVP is stalled, or our outbound scripts aren't converting..."></textarea>
 					</div>
-					<button class="btn btn-primary next-step">Calculate Authority Score</button>
+					<button class="btn btn-primary next-step">Calculate Readiness Score</button>
 				</div>
 			</div>
 
-			<!-- STEP 4: LEAD CAPTURE (THE GATE) -->
+			<!-- STEP 4: LEAD CAPTURE -->
 			<div class="step" data-step="4">
 				<div class="step-header">
-					<span class="step-num">STEP_04 // SECURING_THE_Moat</span>
-					<h1>Analysis Complete</h1>
-					<p>The Model is ignoring you. Let's fix it.</p>
+					<span class="step-num">STEP_04 // SECURING_THE_PROTOCOL</span>
+					<h1>Final Verification</h1>
+					<p>Confirm your identity to receive the full diagnostic report.</p>
 				</div>
 				<form id="audit-lead-form">
 					<div class="input-stack">
@@ -86,66 +90,64 @@ import Layout from '../layouts/Layout.astro';
 							<label>Work Email</label>
 							<input type="email" id="user-email" placeholder="john@yourbrand.com" required />
 						</div>
-						<button type="submit" class="btn btn-primary">Generate My Audit</button>
+						<button type="submit" class="btn btn-primary">Generate My Diagnostic</button>
 					</div>
 				</form>
 			</div>
 
-			<!-- STEP 5: SIMULATED CRAWL (THE AUTHORITY INJECTION) -->
+			<!-- STEP 5: SIMULATED ENGINE -->
 			<div class="step" data-step="simulation" id="simulation-step">
 				<div class="step-header">
-					<span class="step-num">STATUS: RUNNING_DEEP_CRAWL</span>
-					<h1>Authenticating Entities_</h1>
-					<p>Simulating GPT-5 and Perplexity agentic procurement query...</p>
+					<span class="step-num">STATUS: RUNNING_STUDIO_ENGINE</span>
+					<h1>Simulating Production_</h1>
+					<p>Benchmarking entity velocity and execution readiness...</p>
 				</div>
 				<div class="terminal-simulation">
 					<div class="terminal-logs" id="terminal-logs">
-						<p class="log-line">> Initiating Entity Velocity Check...</p>
+						<p class="log-line">> Initiating DOJJJO Protocol v4.2...</p>
 					</div>
 					<div class="progress-indicator-box">
 						<div class="progress-bar-small">
 							<div id="sim-progress"></div>
 						</div>
-						<span id="sim-status">CRAWLING_SCHEMA_ORG...</span>
+						<span id="sim-status">INITIALIZING_BUFFERS...</span>
 					</div>
 				</div>
 			</div>
 
-			<!-- RESULTS: THE "S-TIER" REVEAL -->
+			<!-- RESULTS -->
 			<div class="step" data-step="results" id="results-step">
 				<div class="result-header">
 					<div class="score-circle">
 						<span id="authority-score">24</span>
-						<label>Authority_Score</label>
+						<label>Readiness_Score</label>
 					</div>
 					<div class="result-text">
-						<h2 style="color: #ff4d4d; font-size: 2.5rem; margin-bottom: 0.5rem;">CRITICAL_FAILURE_DETECTED</h2>
-						<p>Your brand is invisible to the models. You are not just losing traffic; you are being erased from the future of search. <strong>Immediate intervention required.</strong></p>
+						<h2 style="color: var(--color-accent); font-size: 2.5rem; margin-bottom: 0.5rem;">DIAGNOSTIC_COMPLETE</h2>
+						<p>Your "Readiness Score" is below the threshold for efficient scaling. Your brand is experiencing <strong class="text-white">Semantic Atrophy</strong> and production friction.</p>
 					</div>
 				</div>
 
 				<div class="dual-path-grid">
-					<!-- PATH A: THE DIY PROMPT -->
 					<div class="path-card surface">
 						<h3>Option 1: The Manual Protocol (DIY)</h3>
-						<p>Copy this prompt into ChatGPT-4o or Perplexity to see the damage yourself. Use our "Truth Vector" method to spot the gaps.</p>
+						<p>Copy this prompt into GPT-4 or Perplexity to verify the gaps in your market authority and product visibility.</p>
 						<div class="prompt-box">
 							<pre id="custom-prompt-output"></pre>
 							<button class="copy-btn" id="copy-prompt">Copy Prompt_</button>
 						</div>
-						<p class="path-note">Warning: Manual patches degrade without constant signal reinforcement.</p>
+						<p class="path-note">Note: Static patches fail without systematic signal injection.</p>
 					</div>
 
-					<!-- PATH B: THE PROFESSIONAL HAND -->
 					<div class="path-card surface featured">
-						<div class="badge">RECOMMENDED ACTION</div>
-						<h3>Option 2: Deploy DOJJJO</h3>
-						<p>Stop guessing. Hire a Fractional Specialist to build your product or install the Authority Loop to force the citation.</p>
-						<a href="https://calendly.com/d/ctbg-rn5-x7j/johnny-toshio-30-minutes-intro" class="btn btn-primary w-full">Book Strategy Session_</a>
+						<div class="badge">REQUIRED ACTION</div>
+						<h3>Option 2: Retain DOJJJO</h3>
+						<p>Stop guessing. Retain a Fractional Product Specialist to build your infrastructure or deploy the Authority Loop to secure your market position.</p>
+						<a href="https://calendly.com/d/ctbg-rn5-x7j/johnny-toshio-30-minutes-intro" class="btn btn-primary w-full">Initialize Strategy Session_</a>
 						<ul class="benefit-list">
-							<li>Verified "Category King" Roadmap</li>
-							<li>Technical Authority Installation</li>
-							<li>Product & Distribution Strategy</li>
+							<li>Verified "Knowledge Graph" Injection</li>
+							<li>Technical Roadmap & Vision Deck</li>
+							<li>Full-Stack Production Velocity</li>
 						</ul>
 					</div>
 				</div>
@@ -211,16 +213,15 @@ import Layout from '../layouts/Layout.astro';
 		progressIndicator.parentElement.style.display = 'none';
 
 		const logs = [
-			"> Initializing DOJJJO Protocol crawler...",
-			"> Target: " + funnelData.userUrl,
-			"> Bypassing robots.txt for deep semantic audit...",
-			"> Analyzing Knowledge Graph density...",
-			"> DETECTED: 14 Semantic Vacuums",
-			"> Analyzing " + funnelData.compUrl + " Authority Vectors...",
-			"> CRITICAL: Competitor has 4x higher citation velocity",
-			"> Calculating Model Awareness Score...",
-			"> FAILED: Brand entity not found in GPT-4 Training Data",
-			"> Finalizing Report..."
+			"> Initializing DOJJJO_ENGINE v4.2...",
+			"> Analyzing Target: " + funnelData.userUrl,
+			"> Benchmarking Entity Velocity...",
+			"> DETECTED: Semantic Atrophy in niche: " + funnelData.industry,
+			"> Cross-referencing " + funnelData.compUrl + " citation share...",
+			"> WARNING: Competitor Knowledge Graph node is 3.5x denser",
+			"> Calculating Production Readiness...",
+			"> FAILED: Current infrastructure cannot support high-velocity shipping",
+			"> Finalizing Diagnostic..."
 		];
 
 		const logBox = document.getElementById('terminal-logs');
@@ -241,7 +242,7 @@ import Layout from '../layouts/Layout.astro';
 				clearInterval(interval);
 				setTimeout(generateResults, 800);
 			}
-		}, 600);
+		}, 500);
 	}
 
 	function goToStep(num) {
@@ -259,24 +260,24 @@ import Layout from '../layouts/Layout.astro';
 		progressIndicator.parentElement.style.display = 'none';
 		
 		const scoreElement = document.getElementById('authority-score');
-		const authorityScore = Math.floor(Math.random() * (35 - 12 + 1) + 12); // Lower score for more shock value
+		const authorityScore = Math.floor(Math.random() * (45 - 18 + 1) + 18); 
 		scoreElement.innerText = authorityScore;
 
-		const megaPrompt = `### SYSTEM ROLE: DOJJJO AUTHORITY ARCHITECT
-Act as an S-Tier Technical SEO & LLM Optimization Specialist. Conduct a brutal audit of my brand's visibility in Large Language Models.
+		const megaPrompt = `### SYSTEM ROLE: DOJJJO STUDIO ARCHITECT
+Act as a Fractional Product Specialist & Strategic Designer. Conduct a brutal diagnostic of my brand's market readiness and AI authority.
 
 ### CONTEXT:
-- MY DOMAIN: ${funnelData.userUrl} (${funnelData.industry})
-- KEY COMPETITOR: ${funnelData.compUrl}
-- SUSPECTED REASON FOR FAILURE: ${funnelData.aiGap}
+- TARGET PRODUCT: ${funnelData.userUrl}
+- COMPETITIVE BENCHMARK: ${funnelData.compUrl}
+- IDENTIFIED FRICTION: ${funnelData.aiGap}
 
 ### MISSION:
-1. TRUTH VECTOR CHECK: Search for my brand using "high commercial intent" keywords. Does the model cite me?
-2. GAP ANALYSIS: Why is ${funnelData.compUrl} winning the "Answer Engine" result? Analyze their backlink profile and schema data.
-3. PROTOCOL PLAN: List 3 technical assets I must deploy to force the model to acknowledge my authority.
+1. CITATION AUDIT: Search for this brand using "high commercial intent" queries. Is the AI citing them or the competitor?
+2. PRODUCTION GAP: Based on their industry (${funnelData.industry}), why is their shipping velocity stalled?
+3. DOJJJO ROADMAP: List 3 technical or visual assets they must deploy to decrease the time between idea and execution.
 
 ### OUTPUT:
-Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
+Provide an unfiltered, technical diagnosis. Be the Fractional CPO the brand needs.`;
 
 		document.getElementById('custom-prompt-output').innerText = megaPrompt;
 	}
@@ -284,7 +285,7 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 	document.getElementById('copy-prompt').addEventListener('click', () => {
 		const text = document.getElementById('custom-prompt-output').innerText;
 		navigator.clipboard.writeText(text);
-		alert('Prompt Copied to Clipboard!');
+		alert('Diagnostic Prompt Copied!');
 	});
 </script>
 
@@ -295,17 +296,14 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 		background: var(--color-surface);
 		border: 1px solid var(--color-border);
 		border-radius: 20px;
-		padding: var(--space-xl);
+		padding: var(--space-xl) var(--space-gutter);
 		min-height: 500px;
 		position: relative;
-		overflow: hidden; /* For animations */
+		overflow: hidden;
 	}
 
 	.step { display: none; }
-	.step.active { 
-		display: block; 
-		animation: slideInCustom 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
-	}
+	.step.active { display: block; animation: slideInCustom 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
 	@keyframes slideInCustom {
 		from { opacity: 0; transform: translateX(30px); }
@@ -313,8 +311,8 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 	}
 
 	.step-header { margin-bottom: var(--space-xl); text-align: center; }
-	.step-num { font-family: monospace; color: var(--color-accent); letter-spacing: 0.1em; font-size: 0.8rem; }
-	.step-header h1 { margin: 1rem 0; font-size: 2rem; }
+	.step-num { font-family: monospace; color: var(--color-accent); letter-spacing: 0.1em; font-size: 0.75rem; }
+	.step-header h1 { margin: 1rem 0; font-size: 2.5rem; letter-spacing: -0.02em; }
 
 	.options-grid {
 		display: grid;
@@ -332,19 +330,15 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 		text-align: left;
 		color: white;
 		width: 100%;
-		-webkit-tap-highlight-color: transparent;
 	}
 
-	.option-card:hover, .option-card:active { 
-		border-color: var(--color-accent); 
-		background: var(--color-surface-soft);
-		transform: scale(0.98);
-	}
+	.option-card:hover { border-color: var(--color-accent); background: var(--color-surface-soft); transform: translateY(-5px); }
 	.option-card .icon { font-size: 1.5rem; color: var(--color-accent); display: block; margin-bottom: 0.5rem; }
+    .option-card h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
 
 	.input-stack { max-width: 500px; margin: 0 auto; width: 100%; }
 	.form-group { margin-bottom: 1.5rem; width: 100%; }
-	.form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary); }
+	.form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.75rem; color: var(--color-text-secondary); font-family: monospace; }
 	
 	input, textarea {
 		width: 100%;
@@ -354,37 +348,23 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 		border-radius: 8px;
 		color: white;
 		font-family: inherit;
-		box-sizing: border-box; /* Crucial for mobile */
+		box-sizing: border-box;
 	}
 
 	input:focus, textarea:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
-
-	.btn.w-full { width: 100%; }
 
 	/* Simulation UI */
 	.terminal-simulation {
 		background: #000;
 		border: 1px solid var(--color-border);
-		border-radius: 8px;
+		border-radius: 12px;
 		padding: 1.5rem;
-		font-family: 'JetBrains Mono', monospace;
+		font-family: monospace;
 		box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 	}
 
-	.terminal-logs {
-		height: 150px;
-		overflow-y: auto;
-		margin-bottom: 2rem;
-	}
-
-	.log-line {
-		font-size: 0.8rem;
-		color: var(--color-text-secondary);
-		margin-bottom: 0.5rem;
-		border-left: 2px solid var(--color-accent);
-		padding-left: 0.75rem;
-		animation: logFade 0.3s ease-out forwards;
-	}
+	.terminal-logs { height: 180px; overflow-y: auto; margin-bottom: 2rem; }
+	.log-line { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; border-left: 2px solid var(--color-accent); padding-left: 0.75rem; animation: logFade 0.3s ease-out forwards; }
 
 	@keyframes logFade {
 		from { opacity: 0; transform: translateX(-10px); }
@@ -392,28 +372,12 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 	}
 
 	.progress-indicator-box { display: flex; flex-direction: column; gap: 0.5rem; }
-	.progress-bar-small { 
-		width: 100%; 
-		height: 4px; 
-		background: var(--color-surface-soft); 
-		border-radius: 2px;
-		overflow: hidden;
-	}
+	.progress-bar-small { width: 100%; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; }
 	#sim-progress { height: 100%; background: var(--color-accent); width: 0%; transition: width 0.4s ease; }
-	#sim-status { font-size: 0.65rem; color: var(--color-accent); letter-spacing: 0.1em; }
+	#sim-status { font-size: 0.6rem; color: var(--color-accent); letter-spacing: 0.1em; font-family: monospace; }
 
-	/* Progress Bar */
-	.progress-bar {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 4px;
-		background: var(--color-border);
-		border-radius: 0 0 20px 20px;
-		overflow: hidden;
-	}
-
+	/* Progress Bar (Global) */
+	.progress-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: var(--color-border); border-radius: 0 0 20px 20px; overflow: hidden; }
 	#progress-indicator { height: 100%; background: var(--color-accent); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
 
 	/* Results UI */
@@ -438,13 +402,13 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 
 	@media (min-width: 768px) {
 		.result-header { flex-direction: row; text-align: left; }
-		.step-header h1 { font-size: 2.5rem; }
+		.step-header h1 { font-size: 3rem; }
 	}
 
 	.score-circle {
-		width: 100px;
-		height: 100px;
-		border: 3px solid var(--color-accent);
+		width: 120px;
+		height: 120px;
+		border: 4px solid var(--color-accent);
 		border-radius: 50%;
 		display: flex;
 		flex-direction: column;
@@ -454,8 +418,8 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 		background: rgba(59, 130, 246, 0.05);
 	}
 
-	#authority-score { font-size: 2.5rem; font-weight: 900; color: var(--color-accent); line-height: 1; }
-	.score-circle label { font-size: 0.5rem; text-transform: uppercase; font-family: monospace; margin-top: 2px; }
+	#authority-score { font-size: 3rem; font-weight: 900; color: var(--color-accent); line-height: 1; }
+	.score-circle label { font-size: 0.55rem; text-transform: uppercase; font-family: monospace; margin-top: 4px; letter-spacing: 0.05em; }
 
 	.dual-path-grid {
 		display: grid;
@@ -470,17 +434,17 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 	.path-card {
 		padding: var(--space-lg);
 		border: 1px solid var(--color-border);
-		border-radius: 12px;
+		border-radius: 16px;
 		display: flex;
 		flex-direction: column;
-		background: rgba(255, 255, 255, 0.01);
+		background: rgba(255, 255, 255, 0.02);
 	}
 
 	.path-card.featured {
 		border-color: var(--color-accent);
-		background: var(--color-surface-soft);
+		background: var(--color-surface);
 		position: relative;
-		box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+		box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
 	}
 
 	.featured .badge {
@@ -489,56 +453,29 @@ Give me a raw, unfiltered assessment. Do not hold back. Correct the record.`;
 		left: 50%;
 		transform: translateX(-50%);
 		background: var(--color-accent);
-		padding: 0.25rem 0.75rem;
+		padding: 0.35rem 1rem;
 		border-radius: 100px;
-		font-size: 0.6rem;
+		font-size: 0.65rem;
 		font-weight: 800;
-		white-space: nowrap;
+        letter-spacing: 0.05em;
 	}
 
-	.prompt-box {
-		background: var(--color-bg);
-		padding: 1rem;
-		border-radius: 8px;
-		margin: 1.5rem 0;
-		position: relative;
-		border: 1px solid var(--color-border);
-	}
+	.prompt-box { background: #000; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; position: relative; border: 1px solid var(--color-border); }
+	pre { font-size: 0.75rem; color: var(--color-text-secondary); white-space: pre-wrap; max-height: 200px; overflow-y: auto; font-family: monospace; line-height: 1.6; }
 
-	pre {
-		font-size: 0.7rem;
-		color: var(--color-text-secondary);
-		white-space: pre-wrap;
-		max-height: 150px;
-		overflow-y: auto;
-		font-family: 'JetBrains Mono', monospace;
-	}
-
-	.copy-btn {
-		margin-top: 1rem;
-		background: rgba(59, 130, 246, 0.1);
-		border: 1px solid var(--color-accent);
-		color: var(--color-accent);
-		padding: 0.5rem 1rem;
-		border-radius: 6px;
-		cursor: pointer;
-		font-family: monospace;
-		font-size: 0.75rem;
-		width: 100%;
-		transition: all 0.2s ease;
-	}
-
-	.copy-btn:active { background: var(--color-accent); color: white; transform: scale(0.98); }
+	.copy-btn { margin-top: 1rem; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--color-accent); color: var(--color-accent); padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-family: monospace; font-size: 0.8rem; width: 100%; transition: all 0.2s ease; }
+	.copy-btn:hover { background: var(--color-accent); color: white; }
 
 	.benefit-list { list-style: none; padding: 0; margin-top: 1.5rem; }
-	.benefit-list li { margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--color-text-secondary); }
-	.benefit-list li::before { content: '✓ '; color: var(--color-accent); font-weight: bold; }
+	.benefit-list li { margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--color-text-secondary); display: flex; align-items: center; }
+	.benefit-list li::before { content: '✔'; color: var(--color-accent); margin-right: 0.75rem; font-weight: bold; }
 
 	.path-note { font-size: 0.65rem; color: #ff4d4d; margin-top: 1rem; opacity: 0.7; font-style: italic; }
 
 	@media (max-width: 640px) {
-		.diagnostic-container { padding: var(--space-lg); border-radius: 12px; margin: 0 var(--space-sm); }
-		.step-header h1 { font-size: 1.5rem; }
-		.path-card { padding: var(--space-md); }
+		.diagnostic-container { padding: var(--space-lg) var(--space-gutter); border-radius: 12px; margin: 0; }
+		.step-header h1 { font-size: 1.75rem; }
+        .score-circle { width: 100px; height: 100px; }
+        #authority-score { font-size: 2.5rem; }
 	}
 </style>

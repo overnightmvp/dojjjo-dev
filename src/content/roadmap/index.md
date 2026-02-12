@@ -1,6 +1,6 @@
 ---
 title: "S-Tier Business Roadmap"
-description: "The definitive blueprint for Caption's Trust Authority Loop."
+description: "The definitive blueprint for DOJJJO's Trust Authority Loop."
 ---
 
 # S-Tier Business Roadmap: CAPTION // THE TRUST AUTHORITY LOOP

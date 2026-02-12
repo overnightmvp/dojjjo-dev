@@ -100,7 +100,7 @@ Get the new scripts in [Sales Scripts & Outreach](/roadmap/07-sales-scripts).
 
 ## Do you need a professional hand with this?
 
-**Definition:** Managing a high-velocity SDR team while maintaining technical authority is a massive operational lift. Caption.ai's **[Outbound Service](/services/outbound)** handles the full sales cycle for you.
+**Definition:** Managing a high-velocity SDR team while maintaining technical authority is a massive operational lift. DOJJJO.ai's **[Outbound Service](/services/outbound)** handles the full sales cycle for you.
 
 **The Bottom Line:**
 You don't need more leads. You need more *belief*.

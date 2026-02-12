@@ -103,7 +103,7 @@ Check the [Launch Sprint Checklist](/roadmap/10-launch-checklist).
 
 ## Do you need a professional hand with this?
 
-**Definition:** Scaling entity mentions and managing high-speed indexing requires precise technical execution. Caption.ai's [Authority Tier](/services/trust-authority-loop) automates this process.
+**Definition:** Scaling entity mentions and managing high-speed indexing requires precise technical execution. DOJJJO.ai's [Authority Tier](/services/authority-loop) automates this process.
 
 **The Promise:**
 We don't just "rank" you. We install you as the **Category King** in 30 days.

@@ -100,7 +100,7 @@ Learn the new language in [LLM Strategy](/roadmap/05-llm-strategy).
 
 ## Do you need a professional hand with this?
 
-**Definition:** Correctly mapping concepts requires a deep understanding of AI tokenization and technical schema. Caption.ai specializes in building these "Semantic Handshakes."
+**Definition:** Correctly mapping concepts requires a deep understanding of AI tokenization and technical schema. DOJJJO.ai specializes in building these "Semantic Handshakes."
 
 **The Outcome:**
 We structure your site so that when an AI looks for the "Best Provider," your brand name is the **mathematical output**.

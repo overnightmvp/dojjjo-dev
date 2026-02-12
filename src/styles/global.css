@@ -32,6 +32,8 @@
     --space-lg: 4rem;
     --space-xl: 8rem;
     --space-2xl: 12rem;
+    --space-gutter: 1rem;
+    /* Normalized 16px horizontal spacing */
 
     /* 04. Shadows & Layering */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -125,7 +127,7 @@ a {
 .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-gutter);
 }
 
 .section {
@@ -286,7 +288,7 @@ a {
 .nav-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-gutter);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -521,5 +523,31 @@ a {
     .logo-strip {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    /* Enforce single-column grids on mobile */
+    .icp-grid,
+    .value-grid,
+    .philosophy-grid,
+    .footer-grid,
+    .dual-path-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-lg);
+    }
+
+    /* Standardize mobile section spacing */
+    .section,
+    .roadmap-index,
+    .roadmap-page {
+        padding: var(--space-lg) 0 !important;
+    }
+
+    .roadmap-content {
+        padding: var(--space-gutter) !important;
+        margin-bottom: var(--space-lg) !important;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-lg) !important;
     }
 }

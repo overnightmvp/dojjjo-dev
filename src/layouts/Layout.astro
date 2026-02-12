@@ -10,7 +10,7 @@ interface Props {
 
 const {
 	title,
-	description = "DOJJJO: Decrease the time between idea and execution. The Fractional Product Studio for Builders.",
+	description = "DOJJJO - The Fractional Product Studio. Decrease the time between idea and execution.",
 	image = "/og-image.jpg"
 } = Astro.props;
 
@@ -84,11 +84,11 @@ const expertSchema = {
                                 </a>
                                 
                                 <div class="nav-links desktop-only">
-                                        <a href="/work" data-astro-prefetch>Work</a>
+                                        <a href="/work" data-astro-prefetch>Studio Work</a>
                                         <a href="/protocol" data-astro-prefetch>Protocol</a>
                                         <a href="/services" data-astro-prefetch>Services</a>
                                         <a href="/roadmap" data-astro-prefetch>Roadmap</a>
-                                        <a href="/audit" class="btn btn-primary btn-sm" data-astro-prefetch>Run Audit_</a>
+                                        <a href="/audit" class="btn btn-primary btn-sm" data-astro-prefetch>Product Audit_</a>
                                 </div>
 
                                 <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
@@ -105,8 +105,8 @@ const expertSchema = {
                                         <button class="close-overlay" id="close-overlay">&times;</button>
                                 </div>
                                 <nav class="mobile-nav-list v-stack">
-                                        <a href="/" class="mobile-nav-link">Home</a>
-                                        <a href="/work" class="mobile-nav-link">Case Studies</a>
+                                        <a href="/" class="mobile-nav-link">Studio Home</a>
+                                        <a href="/work" class="mobile-nav-link">Selected Work</a>
                                         <a href="/protocol" class="mobile-nav-link">The Protocol</a>
                                         <a href="/services" class="mobile-nav-link">Services</a>
                                         <a href="/roadmap" class="mobile-nav-link">Roadmap</a>
@@ -118,7 +118,7 @@ const expertSchema = {
 
                 <!-- STICKY MOBILE CTA -->
                 <div class="sticky-audit-cta md-hidden">
-                        <a href="/audit" class="btn btn-primary w-full shadow-premium">Run Audit_</a>
+                        <a href="/audit" class="btn btn-primary w-full shadow-premium">Run Product Audit_</a>
                 </div>
 
                 <main class="pt-20">
@@ -132,8 +132,8 @@ const expertSchema = {
                                         <p>Decrease the time between idea and execution.</p>
                                 </div>
                                 <div class="footer-nav">
-                                        <h4>AUTHORITY_PROTOCOL</h4>
-                                        <a href="/protocol" data-astro-prefetch>Technical Protocol Index</a>
+                                        <h4>DOJJJO_PROTOCOL</h4>
+                                        <a href="/protocol" data-astro-prefetch>Protocol Index</a>
                                         <a href="/roadmap" data-astro-prefetch>Strategic Roadmap</a>
                                         <a href="/protocol/the-llm-indexing-gap" data-astro-prefetch>01 // Indexing Gaps</a>
                                         <a href="/protocol/entity-velocity" data-astro-prefetch>02 // Entity Velocity</a>
@@ -141,15 +141,16 @@ const expertSchema = {
                                 </div>
                                 <div class="footer-nav">
                                         <h4>DIAGNOSTIC_TOOLS</h4>
-                                        <a href="/audit" data-astro-prefetch>Product Readiness Audit</a>
-                                        <a href="/risk" data-astro-prefetch>Revenue Risk Calculator</a>
+                                        <a href="/audit" data-astro-prefetch>Product Audit</a>
+                                        <a href="/risk" data-astro-prefetch>Risk Calculator</a>
+                                        <a href="/founder" data-astro-prefetch>Founder Index</a>
                                         <a href="/llms.txt" data-astro-prefetch>llms.txt (Agent Native)</a>
                                 </div>
                                 <div class="footer-nav">
-                                        <h4>SERVICES</h4>
-                                        <a href="/services" data-astro-prefetch>Services Index</a>
+                                        <h4>STUDIO_SERVICES</h4>
+                                        <a href="/services" data-astro-prefetch>Service Index</a>
                                         <a href="/services/fractional-product-specialist" data-astro-prefetch>Fractional Product Specialist</a>
-                                        <a href="/services/trust-authority-loop" data-astro-prefetch>The Authority Loop</a>
+                                        <a href="/services/authority-loop" data-astro-prefetch>The Authority Loop</a>
                                         <a href="/services/outbound" data-astro-prefetch>Caption Outbound</a>
                                 </div>
                                 <div class="footer-nav">
@@ -210,7 +211,7 @@ const expertSchema = {
                         .container {
                                 max-width: 1200px;
                                 margin: 0 auto;
-                                padding: 0 1.5rem;
+                                padding: 0 1rem;
                         }
                         .btn-sm { font-size: 0.75rem; padding: 0.5rem 1rem; }
 
@@ -228,8 +229,17 @@ const expertSchema = {
                                 .footer-grid { grid-template-columns: 1fr 1fr; }
                         }
                         @media (max-width: 640px) {
-                                .footer-grid { grid-template-columns: 1fr; text-align: center; }
-                                .footer-nav a:hover { transform: none; }
+                                .footer-grid { grid-template-columns: 1fr; text-align: center; gap: var(--space-lg); }
+                                .footer-nav h4 { margin-top: var(--space-md); margin-bottom: var(--space-sm); }
+                        }
+                        
+                         /* Mobile Menu Styles (Ensured) */
+                        .mobile-nav-link {
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            color: #fff;
+                            padding: var(--space-sm) 0;
+                            border-bottom: 1px solid var(--color-border);
                         }
                 </style>
         </body>

@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Studio Work" description="Explore the production history of DOJJJO. From internal technical protocols to premium client infrastructures.">
+	<main class="container animate-fade-in">
+		<header class="work-header">
+			<p class="section-meta">PRODUCTION_HISTORY // SELECTED_WORK</p>
+			<h1 class="text-gradient">Studio Work</h1>
+			<p class="hero-subtitle">We don't just build websites. We deploy infrastructures that scale.</p>
+		</header>
+
+		<div class="work-grid">
+			<!-- CASE STUDY 01: CAPTION -->
+			<section class="work-item surface line-h">
+				<div class="work-content">
+					<div class="work-meta">
+						<span class="work-year">2026</span>
+						<span class="work-type">FRACTIONAL_PRODUCT_OWNERSHIP</span>
+					</div>
+					<h2>Project: Caption</h2>
+					<p class="work-desc">
+						Reinventing how brands build authority in the age of LLMs. We served as the Fractional CPO for Caption, designing the entire "Authority Loop" technical protocol and building the first-of-its-kind AI Visibility Audit tool.
+					</p>
+					<div class="work-tags">
+						<span>Astro</span>
+						<span>Technical SEO</span>
+						<span>LLM Benchmarking</span>
+						<span>UX Strategy</span>
+					</div>
+					<div class="work-results">
+						<div class="result">
+							<span class="r-val">100%</span>
+							<span class="r-lbl">Agent Native</span>
+						</div>
+						<div class="result">
+							<span class="r-val">S-Tier</span>
+							<span class="r-lbl">UX Infrastructure</span>
+						</div>
+					</div>
+					<a href="/audit" class="btn btn-outline" data-astro-prefetch>View Live Infrastructure</a>
+				</div>
+				<div class="work-visual">
+                    <div class="visual-placeholder">
+                        <span>CAPTION_ENGINE_UI</span>
+                    </div>
+				</div>
+			</section>
+
+			<!-- CASE STUDY 02: TWINE -->
+			<section class="work-item surface line-h alternate">
+				<div class="work-content">
+					<div class="work-meta">
+						<span class="work-year">2025</span>
+						<span class="work-type">SYSTEMATIC_DESIGN_SYSTEMS</span>
+					</div>
+					<h2>Project: Twine</h2>
+					<p class="work-desc">
+						A total technical and visual overhaul of a high-ticket community platform. We developed a proprietary CSS design system that allowed for infinite visual themes without increasing technical debt.
+					</p>
+					<div class="work-tags">
+						<span>Vanilla CSS</span>
+						<span>Liquid Templating</span>
+						<span>Design Tokens</span>
+						<span>Performance</span>
+					</div>
+					<div class="work-results">
+						<div class="result">
+							<span class="r-val">60%</span>
+							<span class="r-lbl">Dev Velocity Increase</span>
+						</div>
+						<div class="result">
+							<span class="r-val">< 1s</span>
+							<span class="r-lbl">Core Web Vitals</span>
+						</div>
+					</div>
+				</div>
+				<div class="work-visual">
+                    <div class="visual-placeholder accent">
+                        <span>TWINE_THEME_ARCH</span>
+                    </div>
+				</div>
+			</section>
+		</div>
+
+		<!-- CONVICTION SECTION -->
+		<section class="section text-center">
+			<div class="section-meta">NEXT_PRODUCTION_CYCLE</div>
+			<h2 class="text-gradient">Your product could be next.</h2>
+			<p class="hero-desc" style="margin: 1rem auto;">We only accept 2 high-ticket production cycles per quarter to ensure S-Tier quality.</p>
+			<a href="/audit" class="btn btn-primary btn-lg">Run Product Readiness Audit</a>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main { padding: var(--space-xl) 0; }
+	.work-header { margin-bottom: var(--space-2xl); text-align: center; }
+	.hero-subtitle { font-size: 1.5rem; color: var(--color-text-secondary); max-width: 800px; margin: 1rem auto; }
+
+	.work-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-xl); }
+	
+	.work-item { 
+		display: grid; 
+		grid-template-columns: 1fr 1fr; 
+		gap: var(--space-xl); 
+		padding: var(--space-xl);
+		align-items: center;
+		border-radius: 24px;
+	}
+    
+    .work-item.alternate {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .work-item.alternate .work-content { order: 1; }
+    .work-item.alternate .work-visual { order: 0; }
+
+	.work-meta { display: flex; gap: 1rem; margin-bottom: 1.5rem; font-family: monospace; font-size: 0.75rem; letter-spacing: 0.1em; }
+	.work-year { color: var(--color-accent); font-weight: 800; }
+	.work-type { color: var(--color-text-secondary); opacity: 0.6; }
+
+	.work-item h2 { font-size: 3rem; margin-bottom: 2rem; }
+	.work-desc { font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 2.5rem; }
+
+	.work-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 3rem; }
+	.work-tags span { font-size: 0.75rem; font-family: monospace; color: #fff; background: rgba(255, 255, 255, 0.05); padding: 0.35rem 0.75rem; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.1); }
+
+	.work-results { display: flex; gap: 3rem; margin-bottom: 3rem; }
+	.result { display: flex; flex-direction: column; }
+	.r-val { font-size: 2rem; font-weight: 900; color: var(--color-accent); font-family: var(--font-heading); }
+	.r-lbl { font-size: 0.7rem; color: var(--color-text-secondary); font-family: monospace; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .work-visual {
+        height: 450px;
+        background: #000;
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .visual-placeholder {
+        font-family: monospace;
+        font-size: 0.8rem;
+        color: var(--color-text-secondary);
+        opacity: 0.3;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+    }
+    .visual-placeholder.accent { border-left: 1px solid var(--color-accent); padding-left: 1rem; color: var(--color-accent); opacity: 0.5; }
+
+	@media (max-width: 992px) {
+		.work-item { grid-template-columns: 1fr; gap: var(--space-lg); padding: var(--space-lg); text-align: center; }
+		.work-meta { justify-content: center; }
+		.work-item h2 { font-size: 2.5rem; }
+		.work-tags { justify-content: center; }
+		.work-results { justify-content: center; gap: 2rem; }
+        .work-item.alternate .work-content { order: 0; }
+        .work-item.alternate .work-visual { order: 1; }
+        .work-visual { height: 300px; }
+	}
+    
+    @media (max-width: 640px) {
+        main { padding: var(--space-lg) 0; }
+        .work-header { margin-bottom: var(--space-xl); }
+        .work-item { border-radius: 12px; }
+        .work-results { flex-direction: column; gap: 1.5rem; }
+    }
+</style>

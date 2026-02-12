@@ -1,0 +1,234 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="The Authority Loop" description="Force AI agents and search engines to cite you as the default choice. Our flagship GEO/LLMEO protocol.">
+	<main class="container animate-fade-in">
+		<header class="service-header">
+			<p class="section-meta">FLAGSHIP_PROTOCOL // AUTHORITY</p>
+			<h1 class="text-gradient">The Authority Loop</h1>
+			<p class="hero-subtitle">Force your entity into the Knowledge Graph. Be the cited default.</p>
+		</header>
+
+		<section class="blueprint-grid">
+			<div class="phase surface">
+				<div class="phase-number">LOOP 01</div>
+				<h3>Entity Verification</h3>
+				<p class="phase-desc">We clean up the digital footprints that confuse LLMs and search engines.</p>
+				<ul>
+					<li>JSON-LD Entity Mapping</li>
+					<li>Knowledge Graph Audit</li>
+					<li>LLM Benchmarking</li>
+					<li>Schema Correction</li>
+				</ul>
+			</div>
+
+			<div class="phase surface">
+				<div class="phase-number">LOOP 02</div>
+				<h3>Signal Injection</h3>
+				<p class="phase-desc">We create the high-authority 'signals' that agents use to verify truth.</p>
+				<ul>
+					<li>Strategic PR Placement</li>
+					<li>Signal-Native Content</li>
+					<li>Cross-Platform Authority</li>
+					<li>External Link Integrity</li>
+				</ul>
+			</div>
+
+			<div class="phase surface">
+				<div class="phase-number">LOOP 03</div>
+				<h3>Agent Acquisition</h3>
+				<p class="phase-desc">We optimize your infrastructure for agentic procurement and LLM indexing.</p>
+				<ul>
+					<li>Agent-Native <code>llms.txt</code></li>
+					<li>Semantic Concept Mapping</li>
+					<li>Citation Share Tracking</li>
+					<li>Conversion Optimization</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="authority-stats section line-h">
+			<div class="section-meta">AUTHORITY_METRICS</div>
+			<div class="stats-grid">
+				<div class="stat-item surface">
+					<h4>Share of Model</h4>
+					<p>Measure how often LLMs (GPT-4, Claude, Gemini) cite you vs your competitors.</p>
+				</div>
+				<div class="stat-item surface">
+					<h4>Entity Velocity</h4>
+					<p>The speed at which new, authoritative mentions of your brand are indexed.</p>
+				</div>
+				<div class="stat-item surface">
+					<h4>Signal Strength</h4>
+					<p>The cumulative trust score of your Knowledge Graph nodes.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="pricing section">
+			<div class="section-meta text-center" style="display: block;">ENGAGEMENT_MODEL</div>
+			<h2 class="text-center text-gradient">The Audit + Loop</h2>
+			<div class="pricing-grid">
+				<div class="price-card">
+					<div class="tier-label">ONE_TIME_DEPLOYMENT</div>
+					<div class="price">$5,500</div>
+					<p class="price-desc">Complete entity audit and initial signal injection protocol.</p>
+					<ul>
+						<li>Full Entity Mapping Audit</li>
+						<li>JSON-LD Schema Implementation</li>
+						<li>llms.txt Configuration</li>
+						<li>Initial PR Consultation</li>
+					</ul>
+					<a href="/audit" class="btn btn-outline" data-astro-prefetch>Start Audit</a>
+				</div>
+
+				<div class="price-card featured">
+                    <div class="badge">FLAGSHIP</div>
+					<div class="tier-label accent">MONTHLY_DOMINANCE</div>
+					<div class="price">$10,000<span>/mo</span></div>
+					<p class="price-desc">Aggressive authority building and citation share acquisition.</p>
+					<ul>
+						<li>Bi-Weekly Benchmarking</li>
+						<li>Continuous Signal Injection</li>
+						<li>Managed PR Outreach</li>
+						<li>Monthly Citation Reports</li>
+					</ul>
+					<a href="/audit" class="btn btn-primary" data-astro-prefetch>Force Dominance</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main { padding: var(--space-xl) 0; }
+	.service-header { margin-bottom: var(--space-xl); text-align: center; }
+	.hero-subtitle { font-size: 1.5rem; color: var(--color-text-secondary); max-width: 800px; margin: 1rem auto; }
+
+	.blueprint-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-md);
+		margin-bottom: var(--space-xl);
+	}
+
+	.phase {
+		padding: var(--space-lg);
+		border: 1px solid var(--color-border);
+		border-radius: 12px;
+		background: var(--color-surface);
+	}
+
+	.phase-number {
+		font-family: monospace;
+		font-weight: 800;
+		color: var(--color-accent);
+		font-size: 0.75rem;
+		margin-bottom: 1rem;
+        letter-spacing: 0.1em;
+	}
+
+	.phase h3 { margin-bottom: 0.5rem; }
+    .phase-desc { font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+
+	.phase ul {
+		list-style: none;
+		padding: 0;
+		color: var(--color-text-secondary);
+	}
+
+	.phase li {
+		margin-bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+        font-size: 0.9rem;
+	}
+
+	.phase li::before {
+		content: '->';
+		margin-right: 0.5rem;
+		color: var(--color-accent);
+		font-size: 0.75rem;
+	}
+
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
+    .stat-item { padding: var(--space-lg); }
+    .stat-item h4 { color: var(--color-accent); margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .stat-item p { font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.6; }
+
+	.pricing-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-lg);
+		max-width: 900px;
+		margin: var(--space-lg) auto;
+	}
+
+	.price-card {
+		padding: var(--space-xl) var(--space-lg);
+		border: 1px solid var(--color-border);
+		border-radius: 16px;
+		background: var(--color-bg);
+		display: flex;
+		flex-direction: column;
+	}
+    
+    .price-card.featured {
+		border-color: var(--color-accent);
+		transform: scale(1.05);
+		position: relative;
+        background: var(--color-surface);
+        box-shadow: 0 0 40px var(--color-accent-glow);
+        z-index: 10;
+	}
+
+    .badge {
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--color-accent);
+		color: white;
+		padding: 0.25rem 1rem;
+		border-radius: 100px;
+		font-size: 0.7rem;
+		font-weight: 800;
+        letter-spacing: 0.1em;
+	}
+
+    .tier-label { font-family: monospace; font-size: 0.75rem; color: var(--color-text-secondary); margin-bottom: 1rem; letter-spacing: 0.1em; }
+    .tier-label.accent { color: var(--color-accent); }
+
+	.price {
+		font-size: 3.5rem;
+		font-weight: 900;
+		margin-bottom: 0.5rem;
+	}
+
+	.price span { font-size: 1.25rem; color: var(--color-text-secondary); font-weight: 400; }
+    .price-desc { font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 2rem; }
+
+	.price-card ul {
+		margin: var(--space-md) 0;
+		padding: 0;
+		list-style: none;
+		flex-grow: 1;
+	}
+
+	.price-card li {
+		margin-bottom: 1rem;
+		color: var(--color-text-secondary);
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+	}
+    .price-card li::before { content: '✔'; color: var(--color-accent); margin-right: 0.75rem; }
+
+	@media (max-width: 992px) {
+		.blueprint-grid { grid-template-columns: 1fr; }
+        .stats-grid { grid-template-columns: 1fr; }
+		.pricing-grid { grid-template-columns: 1fr; }
+        .price-card.featured { transform: none; }
+	}
+</style>

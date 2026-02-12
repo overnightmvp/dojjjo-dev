@@ -105,7 +105,7 @@ Procurement isn't happening in boardrooms anymore. It's happening in servers.
 You either speak the language of the machine, or you are silent.
 
 **The Solution:**
-Caption.ai's [Authority Tier](/services/trust-authority-loop) installs the structural data required to pass Series B/C procurement filters.
+DOJJJO.ai's [Authority Tier](/services/authority-loop) installs the structural data required to pass Series B/C procurement filters.
 
 **Get Verified.**
 [Request Your AI Visibility Audit](/audit)

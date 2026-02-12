@@ -12,7 +12,7 @@ We do not beg. We **Inform**.
 This script works because it reports a technical failure. It triggers the CEO's fear of negligence.
 
 **The Opener:**
-*"Hi [Name], I’m calling from Caption. I just ran a Perplexity search for '[Industry Providers]' and I noticed a technical error. Your company has been completely filtered out of the results, and the AI is actively recommending [Competitor] instead. Are you aware of this gap?"*
+*"Hi [Name], I’m calling from DOJJJO. I just ran a Perplexity search for '[Industry Providers]' and I noticed a technical error. Your company has been completely filtered out of the results, and the AI is actively recommending [Competitor] instead. Are you aware of this gap?"*
 
 *   **Why it works:** You aren't selling. You are reporting a fire.
 *   **The Pivot:** *"It looks like a Schema error. The AI can't read your authority signals. I have the report here—do you want me to send over the screenshot of what the AI is saying about you?"*

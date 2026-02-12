@@ -2,50 +2,50 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Customer Journey Map | Caption">
+<Layout title="Journey Architecture | DOJJJO">
     <main class="container cjm-container animate-fade-in">
         <header class="section-header text-center">
-            <p class="text-accent">INTERNAL_TOOL // V1.0</p>
+            <p class="section-meta">INTERNAL_TOOL // V1.1_REBRANDED</p>
             <h1 class="text-gradient">Customer Journey Architecture</h1>
-            <p class="section-desc mx-auto">Visualizing the flow from "Invisible" to "Authority".</p>
+            <p class="section-desc mx-auto">Visualizing the flow from "Technical Invisibility" to "Certified Authority".</p>
         </header>
 
         <div class="cjm-viz surface glass">
             <div class="mermaid">
                 graph TD
                     %% NODES - STAGES
-                    A[Start: Unaware] -->|Search/Social| B(Awareness: Landing)
-                    B -->|Click CTA| C&#123;Selection: Tier?&#125;
+                    A[Start: Unaware] -->|Search/Social| B(Awareness: Studio Entry)
+                    B -->|Click CTA| C&#123;Selection: Vector?&#125;
                     
                     %% AWARENESS LAYER
                     subgraph AWARENESS [Phase 1: Awareness]
-                        B -->|/index| HOME[/Home: The AI Gap/]
-                        HOME -->|Nav| PROTOCOL[/Protocol Index/]
+                        B -->|/index| HOME[/Home: High-Velocity Studio/]
+                        HOME -->|Protocol| PROTOCOL[/The DOJJJO Protocol/]
                     end
 
                     %% EDUCATION LAYER
                     subgraph EDUCATION [Phase 2: Education]
-                        C -->|Option A| BASE[/Services: Trust Authority Loop/]
-                        C -->|Option B| SPEED[/Services: Hyper-Outbound/]
-                        PROTOCOL -->|Deep Dive| P_DETAIL[Protocol Assets 01-06]
-                        HOME -->|Read Strategy| ROADMAP[Roadmap: The Blueprint]
+                        C -->|Authority| BASE[/Services: Authority Loop/]
+                        C -->|Production| SPEED[/Services: Product Specialist/]
+                        PROTOCOL -->|Deep Dive| P_DETAIL[Protocol Frameworks]
+                        HOME -->|Vision| ROADMAP[Roadmap: The Blueprint]
                     end
 
                     %% DECISION LAYER
                     subgraph DECISION [Phase 3: Decision]
-                        BASE -->|Verify| LLMS[llms.txt Agent File]
-                        SPEED -->|Verify| CASE[Case Studies / Metrics]
-                        P_DETAIL -->|Trust Signal| PR[External PR Anchors]
+                        BASE -->|Verify| LLMS[llms.txt Identity Handshake]
+                        SPEED -->|Verify| CASE[Studio Work / Case Studies]
+                        P_DETAIL -->|Validation| DIAG[Diagnostic Tools]
                     end
 
                     %% CONVERSION LAYER
                     subgraph ACTION [Phase 4: Conversion]
-                        HOME -->|Top CTA| AUDIT
-                        BASE -->|Buy Now| AUDIT
-                        SPEED -->|Book Call| AUDIT
+                        HOME -->|Audit| AUDIT
+                        BASE -->|Retain| AUDIT
+                        SPEED -->|Book| AUDIT
                         ROADMAP -->|Start| AUDIT
-                        AUDIT[<a href='/audit' style='color:#fff'>/AUDIT PAGE</a>] -->|Submit Form| CALENDLY[Calendly Booking]
-                        CALENDLY -->|Close| DEAL[$$$ Contract]
+                        AUDIT[<a href='/audit' style='color:#fff'>/AUDIT_DIAGNOSTIC</a>] -->|Submit| CALENDLY[Calendly Booking]
+                        CALENDLY -->|Initialize| DEAL[$$$ Contract]
                     end
 
                     %% STYLES
@@ -66,24 +66,18 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="legend surface mt-8">
-            <h3>Legend</h3>
+            <h3>Architecture Legend</h3>
             <ul class="legend-list">
-                <li><span class="dot accent"></span><strong>Red Node:</strong> Primary Conversion Point (/audit)</li>
-                <li><span class="dot goal"></span><strong>Green Node:</strong> Revenue Event</li>
-                <li><span class="dot border"></span><strong>Standard Node:</strong> informational Page</li>
+                <li><span class="dot accent"></span><strong>Conversion Hub:</strong> Primary Diagnostic (/audit)</li>
+                <li><span class="dot goal"></span><strong>Revenue Event:</strong> Initial Retainer Signed</li>
+                <li><span class="dot border"></span><strong>Terminal Node:</strong> Informational Asset</li>
             </ul>
         </div>
     </main>
 </Layout>
 
-
-
 <style>
-    .cjm-container {
-        padding: var(--space-xl) 0;
-        position: relative;
-    }
-
+    .cjm-container { padding: var(--space-xl) 0; position: relative; }
     .cjm-viz {
         padding: 0;
         overflow: hidden;
@@ -95,21 +89,13 @@ import Layout from '../layouts/Layout.astro';
         cursor: grab;
         border: 1px solid var(--color-border);
         background: radial-gradient(circle at center, #111 0%, #000 100%);
+        border-radius: 20px;
     }
 
-    .cjm-viz:active {
-        cursor: grabbing;
-    }
+    .cjm-viz:active { cursor: grabbing; }
 
-    .mermaid {
-        transform-origin: center center;
-        transition: transform 0.1s ease-out;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+    .mermaid { transform-origin: center center; transition: transform 0.1s ease-out; width: 100%; display: flex; justify-content: center; }
 
-    /* Controls */
     .viz-controls {
         position: absolute;
         bottom: 2rem;
@@ -140,41 +126,15 @@ import Layout from '../layouts/Layout.astro';
         transition: all 0.2s ease;
     }
 
-    .ctrl-btn:hover {
-        background: var(--color-accent);
-        border-color: var(--color-accent);
-    }
+    .ctrl-btn:hover { background: var(--color-accent); border-color: var(--color-accent); }
+    .ctrl-btn.reset { font-size: 0.8rem; font-weight: bold; letter-spacing: 0.05em; }
 
-    .ctrl-btn.reset {
-        font-size: 0.8rem;
-        font-weight: bold;
-        letter-spacing: 0.05em;
-    }
+    .legend-list { display: flex; gap: 2rem; list-style: none; padding: 0; margin-top: 1.5rem; }
+    .legend-list li { display: flex; align-items: center; gap: 0.5rem; color: var(--color-text-secondary); font-size: 0.9rem; }
 
-    .legend-list {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        padding: 0;
-        margin-top: 1rem;
-    }
-
-    .legend-list li {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--color-text-secondary);
-    }
-
-    .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        display: inline-block;
-    }
-
+    .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
     .dot.accent { background: var(--color-accent); }
-    .dot.goal { background: var(--color-success); }
+    .dot.goal { background: #00cc66; }
     .dot.border { border: 1px solid var(--color-text-secondary); }
 
     .mx-auto { margin-left: auto; margin-right: auto; }
@@ -184,7 +144,6 @@ import Layout from '../layouts/Layout.astro';
 <script type="module" is:inline>
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
     
-    // Initialize Mermaid
     mermaid.initialize({ 
         startOnLoad: true,
         theme: 'dark',
@@ -198,7 +157,6 @@ import Layout from '../layouts/Layout.astro';
         }
     });
 
-    // Simple Pan/Zoom Logic for Mermaid
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.querySelector('.cjm-viz');
         const target = document.querySelector('.mermaid');
@@ -219,30 +177,22 @@ import Layout from '../layouts/Layout.astro';
             target.style.transform = `translate(${pX}px, ${pY}px) scale(${scale})`;
         };
 
-        // ZOOM CONTROLS
         const zoom = (delta) => {
             scale += delta;
-            scale = Math.min(Math.max(0.5, scale), 4); // Limit zoom 0.5x to 4x
+            scale = Math.min(Math.max(0.5, scale), 4);
             updateTransform();
         };
 
         btnIn?.addEventListener('click', () => zoom(0.2));
         btnOut?.addEventListener('click', () => zoom(-0.2));
-        btnReset?.addEventListener('click', () => {
-            scale = 1;
-            pX = 0;
-            pY = 0;
-            updateTransform();
-        });
+        btnReset?.addEventListener('click', () => { scale = 1; pX = 0; pY = 0; updateTransform(); });
 
-        // WHEEL ZOOM
         container.addEventListener('wheel', (e) => {
             e.preventDefault();
             const delta = e.deltaY > 0 ? -0.1 : 0.1;
             zoom(delta);
         });
 
-        // DRAG PANNING
         container.addEventListener('mousedown', (e) => {
             isDragging = true;
             startX = e.clientX - pX;

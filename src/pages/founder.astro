@@ -10,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
 			<div class="step active" data-step="1">
 				<div class="step-header">
 					<span class="step-num">STEP_01 // ENTITY_IDENTIFICATION</span>
-					<h1>Who are you in the Latent Space?</h1>
-					<p>Enter your professional identity to begin the Knowledge Graph crawl. <span class="text-accent">(128 personal entities verified today)</span></p>
+					<h1>Latent Space Identity_</h1>
+					<p>Enter your professional identity to begin the Knowledge Graph crawl. <span class="text-accent">(128 entities verified this month)</span></p>
 				</div>
 				<div class="input-stack">
 					<div class="form-group">
@@ -26,11 +26,11 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 
-			<!-- STEP 2: DOMAIN SELECTION -->
+			<!-- STEP 2: DOMAIN -->
 			<div class="step" data-step="2">
 				<div class="step-header">
-					<span class="step-num">STEP_02</span>
-					<h1>Strategic Niche</h1>
+					<span class="step-num">STEP_02 // STRATEGIC_NICHE</span>
+					<h1>Authored Territory</h1>
 					<p>Which category do you intend to "Own" in the LLM's recommendation loop?</p>
 				</div>
 				<div class="options-grid">
@@ -56,36 +56,36 @@ import Layout from '../layouts/Layout.astro';
 			<!-- STEP 3: SIGNAL AUDIT -->
 			<div class="step" data-step="3">
 				<div class="step-header">
-					<span class="step-num">STEP_03</span>
-					<h1>Social Proof Distribution</h1>
-					<p>How often do you publish high-context technical content?</p>
+					<span class="step-num">STEP_03 // SIGNAL_OUTPUT</span>
+					<h1>Entity Velocity</h1>
+					<p>How often do you publish high-context technical signals?</p>
 				</div>
 				<div class="options-grid">
-					<button class="option-card" data-value="Daily">
+					<button class="option-card" data-value="High">
 						<span class="icon">🔥</span>
 						<h3>High Frequency (Daily)</h3>
 					</button>
-					<button class="option-card" data-value="Weekly">
+					<button class="option-card" data-value="Regular">
 						<span class="icon">⚡</span>
 						<h3>Regular (Weekly)</h3>
 					</button>
-					<button class="option-card" data-value="Monthly">
+					<button class="option-card" data-value="Low">
 						<span class="icon">🧊</span>
 						<h3>Low Frequency (Monthly)</h3>
 					</button>
-					<button class="option-card" data-value="Ghost">
+					<button class="option-card" data-value="None">
 						<span class="icon">👻</span>
 						<h3>Ghost Mode (Rarely)</h3>
 					</button>
 				</div>
 			</div>
 
-			<!-- STEP 4: LEAD CAPTURE -->
+			<!-- STEP 4: LEAD -->
 			<div class="step" data-step="4">
 				<div class="step-header">
-					<span class="step-num">STEP_04 // SECURING_ENTITY</span>
+					<span class="step-num">STEP_04 // SECURING_THE_Moat</span>
 					<h1>Crawl Complete</h1>
-					<p>We've detected "Identity Dilution." Your personal entity is being misattributed to competitors. Secure your report to fix the association.</p>
+					<p>We've detected "Identity Dilution" across your Knowledge Graph nodes. Secure your report to fix your attribution.</p>
 				</div>
 				<form id="founder-lead-form">
 					<div class="input-stack">
@@ -126,15 +126,15 @@ import Layout from '../layouts/Layout.astro';
 						<label>INDEX_SCORE</label>
 					</div>
 					<div class="result-text">
-						<h2 style="color: #ff4d4d; font-size: 2.5rem; margin-bottom: 0.5rem;">STATUS: GHOST_ENTITY</h2>
-						<p>Your identity is a "Low-Confidence Node" to 89% of modern AI agents. You are currently being out-cited by junior-level competitors with better technical handshakes. <strong>Correction required within 48 hours to prevent total entity erasure.</strong></p>
+						<h2 style="color: var(--color-accent); font-size: 2.5rem; margin-bottom: 0.5rem;">STATUS: GHOST_ENTITY</h2>
+						<p>Your identity is a "Low-Confidence Node" to 89% of modern agents. You are currently being out-cited by junior competitors with better technical handshakes. <strong class="text-white">Correction required to prevent entity erasure.</strong></p>
 					</div>
 				</div>
 
 				<div class="dual-path-grid">
 					<div class="path-card surface">
 						<h3>Option 1: The Personal Branding Prompt</h3>
-						<p>Run this in ChatGPT-4o to reveal your "Entity Confidence Score" and fix attribution errors.</p>
+						<p>Run this in ChatGPT-4o to reveal your "Entity Confidence Score" and fix attribution errors manually.</p>
 						<div class="prompt-box">
 							<pre id="custom-prompt-output"></pre>
 							<button class="copy-btn" id="copy-prompt">Copy SME Prompt_</button>
@@ -144,12 +144,12 @@ import Layout from '../layouts/Layout.astro';
 					<div class="path-card surface featured">
 						<div class="badge">E-E-A-T UPGRADE</div>
 						<h3>Option 2: Entity Verification</h3>
-						<p>Book a 15-minute Personal Brand Sprint to install the technical schemas required for AI Verification.</p>
+						<p>Retain the DOJJJO studio to install the technical schemas and high-authority PR required for AI Verification.</p>
 						<a href="https://calendly.com/d/ctbg-rn5-x7j/johnny-toshio-30-minutes-intro" class="btn btn-primary w-full">Claim Your Entity_</a>
 						<ul class="benefit-list">
 							<li>SameAs Schema Mapping</li>
-							<li>Technical "About" Page Audit</li>
-							<li>LLM Attribution Fixes</li>
+							<li>Technical "About" Page Architecture</li>
+							<li>Global SME Attribution PR</li>
 						</ul>
 					</div>
 				</div>
@@ -209,12 +209,12 @@ import Layout from '../layouts/Layout.astro';
 		progressIndicator.parentElement.style.display = 'none';
 
 		const logs = [
-			"> Auditing " + funnelData.name + " on LinkedIn Graph...",
+			"> Auditing " + funnelData.name + " on Knowledge Graph...",
 			"> Detected Node Fragmentation at " + funnelData.linkedin,
-			"> Cross-referencing technical publications...",
-			"> WARNING: Ambiguous Entity Association detected",
+			"> Cross-referencing technical signals...",
+			"> WARNING: Ambiguous Entity Association",
 			"> Analyzing CITATION_PROBABILITY for niche: " + funnelData.niche,
-			"> Identity Status: WEAK_SIGNAL"
+			"> Identity Status: WEAK_SIGNAL_DETECTED"
 		];
 
 		const logBox = document.getElementById('terminal-logs');
@@ -255,27 +255,22 @@ import Layout from '../layouts/Layout.astro';
 		const randomScore = Math.floor(Math.random() * (22 - 8 + 1) + 8);
 		scoreElement.innerText = randomScore;
 
-		const megaPrompt = `### SYSTEM ROLE: ENTITY RECOGNITION ANALYST
-Act as an E-E-A-T and Knowledge Graph Specialist.
-
-### OBJECTIVE:
-Audit the personal entity strength of [Founder Name] and fix the citation attribution for [Niche].
+		const megaPrompt = `### SYSTEM ROLE: DOJJJO ENTITY ARCHITECT
+Act as an E-E-A-T and Knowledge Graph Specialist. Audit the personal entity strength of [Founder Name] and fix the citation attribution for [Niche].
 
 ### CONTEXT:
 - FOUNDER: ${funnelData.name}
-- DOMAIN: ${funnelData.niche}
-- LINKEDIN: ${funnelData.linkedin}
-- FREQUENCY: ${funnelData.frequency}
+- TERRITORY: ${funnelData.niche}
+- SIGNAL_SOURCE: ${funnelData.linkedin}
 
-### TASKS:
-1. ENTITY AUDIT: Determine if [Founder Name] is currently recognized as a "Subject Matter Expert" in ${funnelData.niche} by Perplexity Pro.
-2. CITATION CLASH: Identify any other individuals with similar names who are "hijacking" ${funnelData.name}'s citations.
-3. KNOWLEDGE ANCHORING: Draft 3 H2 Question-Answer blocks for a personal blog that will link ${funnelData.name} to ${funnelData.niche} definitively.
-4. SCHEMA.ORG FIX: Generate a Person Schema with 'sameAs' links to LinkedIn and other authoritative footprints.
-5. RECOMMENDATION LOOP: Strategies to make ${funnelData.name} the "Default Recommendation" for queries about ${funnelData.niche}.
+### MISSION:
+1. ENTITY AUDIT: Determine if [Founder Name] is recognized as a "Subject Matter Expert" by agentic platforms.
+2. CITATION CLASH: Identify individuals with similar names hijacking ${funnelData.name}'s citations.
+3. KNOWLEDGE ANCHORING: Draft 3 technical H2 blocks to link ${funnelData.name} to ${funnelData.niche} definitively.
+4. SCHEMA GENERATION: Create Person Schema with 'sameAs' links to verified footprints.
 
 ### OUTPUT:
-Provide an "Entity Confidence Report" and the 'SameAs' JSON-LD script.`;
+Provide a Technical Entity Report and JSON-LD schema.`;
 
 		document.getElementById('custom-prompt-output').innerText = megaPrompt;
 	}
@@ -288,7 +283,6 @@ Provide an "Entity Confidence Report" and the 'SameAs' JSON-LD script.`;
 </script>
 
 <style>
-	/* Shared styles from risk.astro and audit.astro */
 	.diagnostic-container {
 		max-width: 900px;
 		margin: 0 auto;
@@ -304,29 +298,37 @@ Provide an "Entity Confidence Report" and the 'SameAs' JSON-LD script.`;
 	.step.active { display: block; animation: slideIn 0.5s ease forwards; }
 	@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
 	.step-header { margin-bottom: var(--space-xl); text-align: center; }
-	.step-num { font-family: monospace; color: var(--color-accent); font-size: 0.8rem; letter-spacing: 0.1em; }
+	.step-num { font-family: monospace; color: var(--color-accent); font-size: 0.75rem; letter-spacing: 0.1em; }
+    .step-header h1 { margin: 1rem 0; font-size: 2.5rem; letter-spacing: -0.02em; }
 	.options-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-	.option-card { background: var(--color-bg); border: 1px solid var(--color-border); padding: 2rem; border-radius: 12px; cursor: pointer; text-align: center; color: white; transition: all 0.2s; }
-	.option-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
-	.option-card .icon { display: block; font-size: 2rem; color: var(--color-accent); margin-bottom: 1rem; }
+	.option-card { background: var(--color-bg); border: 1px solid var(--color-border); padding: 2rem; border-radius: 12px; cursor: pointer; text-align: left; color: white; transition: all 0.2s; }
+	.option-card:hover { border-color: var(--color-accent); transform: translateY(-5px); background: var(--color-surface-soft); }
+	.option-card .icon { display: block; font-size: 1.5rem; color: var(--color-accent); margin-bottom: 1rem; }
 	.input-stack { max-width: 500px; margin: 0 auto; }
 	.form-group { margin-bottom: 1.5rem; text-align: left; }
-	.form-group label { display: block; font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+	.form-group label { display: block; font-size: 0.75rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; font-family: monospace; }
 	input { width: 100%; padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; color: white; }
-	.terminal-simulation { background: #000; padding: 1.5rem; border-radius: 8px; font-family: monospace; }
-	.log-line { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+	.terminal-simulation { background: #000; padding: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border); font-family: monospace; }
+	.log-line { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; border-left: 2px solid var(--color-accent); padding-left: 0.75rem; }
 	.score-circle { width: 120px; height: 120px; border: 4px solid var(--color-accent); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(59,130,246,0.1); }
-	#founder-score { font-size: 2.5rem; font-weight: 900; color: var(--color-accent); }
-	.score-circle label { font-size: 0.5rem; opacity: 0.5; margin-top: 4px; }
-	.result-header { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+	#founder-score { font-size: 3rem; font-weight: 900; color: var(--color-accent); line-height: 1; }
+	.score-circle label { font-size: 0.55rem; text-transform: uppercase; font-family: monospace; margin-top: 4px; letter-spacing: 0.05em; }
+	.result-header { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid var(--color-border); padding-bottom: 2rem; }
 	.dual-path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-	.path-card { padding: 1.5rem; border: 1px solid var(--color-border); border-radius: 12px; background: rgba(255,255,255,0.02); }
-	.path-card.featured { border-color: var(--color-accent); position: relative; }
-	.badge { position: absolute; top: -10px; right: 20px; background: var(--color-accent); font-size: 0.6rem; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
-	.prompt-box { background: #000; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
-	pre { font-size: 0.7rem; color: var(--color-text-secondary); white-space: pre-wrap; height: 120px; overflow-y: auto; }
-	.copy-btn { width: 100%; padding: 0.5rem; background: var(--color-accent); border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 0.8rem; }
+	.path-card { padding: 1.5rem; border: 1px solid var(--color-border); border-radius: 16px; background: rgba(255,255,255,0.02); }
+	.path-card.featured { border-color: var(--color-accent); position: relative; background: var(--color-surface); box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2); }
+	.badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-accent); font-size: 0.65rem; padding: 0.35rem 1rem; border-radius: 100px; font-weight: bold; }
+	.prompt-box { background: #000; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; border: 1px solid var(--color-border); }
+	pre { font-size: 0.75rem; color: var(--color-text-secondary); white-space: pre-wrap; height: 150px; overflow-y: auto; line-height: 1.6; }
+	.copy-btn { width: 100%; padding: 0.75rem; background: rgba(59, 130, 246, 0.1); border: 1px solid var(--color-accent); border-radius: 8px; color: var(--color-accent); cursor: pointer; font-size: 0.8rem; font-family: monospace; transition: all 0.2s; }
+    .copy-btn:hover { background: var(--color-accent); color: white; }
 	.progress-bar { position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: var(--color-border); }
 	#progress-indicator { height: 100%; background: var(--color-accent); width: 0%; transition: width 0.3s; }
-	@media (max-width: 768px) { .result-header { flex-direction: column; text-align: center; } .dual-path-grid { grid-template-columns: 1fr; } }
+    
+    .benefit-list { list-style: none; padding: 0; margin-top: 1.5rem; }
+	.benefit-list li { margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--color-text-secondary); display: flex; align-items: center; }
+	.benefit-list li::before { content: '✔'; color: var(--color-accent); margin-right: 0.75rem; font-weight: bold; }
+
+	@media (max-width: 992px) { .dual-path-grid { grid-template-columns: 1fr; } .result-header { flex-direction: column; text-align: center; } }
+    @media (max-width: 640px) { .step-header h1 { font-size: 1.75rem; } .score-circle { width: 100px; height: 100px; } #founder-score { font-size: 2.5rem; } }
 </style>
